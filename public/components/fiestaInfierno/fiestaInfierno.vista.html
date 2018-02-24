@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fiesta en el Infierno</title>
-    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
-</head>
-<body>
-        <form>
-                Fecha de la fiesta:
-                <input type="date"  name="fiesta"id="fecha">
-              </form>
-    <form action="Cantidad de horas">
-        Cantidad de horas:
-        <input type="number" name="quantity" min="1" id="cantidadHoras" >
-        
-      </form>
+<div>
+  <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
+    <div class="form-action">
+      <label for="">Fecha de la Fiesta</label>
+      <input type="date"id="fecha" ng-model="vm.nuevaFiesta.fecha">
+    </div>
+    <div class="form-action">
+        <label for="">Cantidad de horas</label>
+        <input type="number" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas">
+      </div>
+      <div class="form-action">
+          <label for="">Animadores</label>
+          <select name="Animadores"id="animador"ng-model="vm.nuevaFiesta.animador">
+              <option value="Payasita Pilar la Bonachona">Payasita Pilar la Bonachona</option>
+              <option value="Maromero Andrey  ">Maromero Andrey  </option>
+              
+            </select>
+            
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
+  </form>
 
-      <form action="Animadores">
-          Animadores de fiesta:
-        <select name="Animadores"id="animador">
-          <option value="Payasita Pilar la Bonachona">Payasita Pilar la Bonachona</option>
-          <option value="Maromero Andrey  ">Maromero Andrey  </option>
-          
-        </select>
-        <br><br>
-        <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
-      </form>
-</body>
-</html>
+
+
+
+
+</div>
+   
+
+
+
+
+
+
+
+
+
+
+
+        

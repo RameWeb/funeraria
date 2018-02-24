@@ -24,7 +24,17 @@
       // se convoca el css
       css: './components/landing-page/landong-page.style.css'
     })
-
+    .state('registroFiesta', {
+      url: '/registrarUnaFiesta',
+      templateUrl: './components/fiestaInfierno/fiestaInfierno.vista.html',
+      resolve:{
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/fiestaInfierno/fiestaInfierno.controlador.js')
+        }]
+      },
+      controller:'controladorFiesta',
+      controllerAs:'vm'
+    })
     
 
 
