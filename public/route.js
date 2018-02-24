@@ -31,7 +31,14 @@
       // Se convoca al html
       templateUrl: './components/entierros/entierros.vista.html',
       // se convoca el css
-      css: './components/entierros/entierros.estilo.css'
+      css: './components/entierros/entierros.estilo.css',
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/entierros/entierros.controlador.js')
+        }]
+      },
+      controller: 'controladorEntierros',
+      controllerAs: 'vm'
     })
 
     

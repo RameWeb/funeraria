@@ -1,1 +1,48 @@
-<h3>Hola Mundo!</h3>
+<div class="container">
+  <h3>Hola Mundo!</h3>
+  <div class="row">
+    <form name="formRegistroEntierros" autocomplete="off" ng-submit="vm.registrarEntierro(vm.nuevoEntierro)" novalidate>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Hora Inicio:</label>
+              <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaInicio">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Hora Final:</label>
+              <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaFinal">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Seleccione una fecha:</label>
+          <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.fecha">          
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Seleccione un lugar:</label>
+          <select id="inputState" class="form-control" ng-model="vm.nuevoEntierro.lugar">
+            <option selected>- Seleccionar -</option>
+            <option>Cripta subterránea</option>
+            <option>Patio de los vecinos</option>
+            <option>Cementerio</option>
+            <option>Basurero</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput">Seleccione una prioridad:</label>
+          <select id="inputState" class="form-control" ng-model="vm.nuevoEntierro.prioridad">
+            <option>- Seleccionar -</option>
+            <option value="0">Urgente</option>
+            <option value="1">Normal</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-disabled="formRegustroUsuarios.$invalid ||formRegustroUsuarios.$error">Registrar</button>
+
+      </div>
+    </form>
+  </div>
+</div>
