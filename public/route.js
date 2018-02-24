@@ -25,6 +25,15 @@
       css: './components/landing-page/landong-page.style.css'
     })
 
+    .state('entierros', {
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/entierros',
+      // Se convoca al html
+      templateUrl: './components/entierros/entierros.vista.html',
+      // se convoca el css
+      css: './components/entierros/entierros.estilo.css'
+    })
+
     
 
 
