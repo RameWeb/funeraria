@@ -13,7 +13,7 @@
       //  registrar una nueva fiesta desde el html
       vm.registrarFiesta = (pnuevaFiesta) => {
 
-        let objNuevaFiesta = new Fiesta(pnuevaFiesta.fecha,pnuevaFiesta.horas,pnuevaFiesta.animador );
+        let objNuevaFiesta = new Fiesta(pnuevaFiesta.fecha,pnuevaFiesta.horas,pnuevaFiesta.animador, pnuevaFiesta.pago );
   
         console.log(pnuevaFiesta);
         console.log(objNuevaFiesta);

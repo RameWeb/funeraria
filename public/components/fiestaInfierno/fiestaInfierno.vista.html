@@ -2,21 +2,29 @@
   <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
     <div class="form-action">
       <label for="">Fecha de la Fiesta</label>
-      <input type="date"id="fecha" ng-model="vm.nuevaFiesta.fecha">
+      <input type="date"id="fecha" ng-model="vm.nuevaFiesta.fecha"  required>
     </div>
     <div class="form-action">
         <label for="">Cantidad de horas</label>
-        <input type="number" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas">
+        <input type="number" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
       </div>
       <div class="form-action">
           <label for="">Animadores</label>
-          <select name="Animadores"id="animador"ng-model="vm.nuevaFiesta.animador">
+          <select name="Animadores"id="animador"ng-model="vm.nuevaFiesta.animador" required>
               <option value="Payasita Pilar la Bonachona">Payasita Pilar la Bonachona</option>
               <option value="Maromero Andrey  ">Maromero Andrey  </option>
               
             </select>
             
         </div>
+        <div class="form-action">
+          <label for="">Efectivo"</label>
+          <input type="radio" name="metodoPago" value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
+          <label for="">Tarjeta"</label>
+          <input type="radio" name="metodoPago" value="Tarjeta" ng-model="vm.nuevaFiesta.pago" required> 
+          <label for="">Cheque"</label>
+        <input type="radio" name="metodoPago" value="Cheque" ng-model="vm.nuevaFiesta.pago" required> 
+         </div>
         <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
   </form>
 
