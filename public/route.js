@@ -25,6 +25,12 @@
       css: './components/landing-page/landong-page.style.css'
     })
 
+    .state('retoques', {
+      url:'/retoques',
+      templateUrl: './components/retoques/retoques.vista.html',
+      css: './components/retoques/retoques.estilo.css'
+    })
+
     
 
 
