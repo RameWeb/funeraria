@@ -4,9 +4,7 @@ class Fiesta{
       this.horas = pCantidadHoras;
       this.animador=pAnimador;
       this.pago=pPago;
-      this.fiestas = [];
+      
     }
-    agregarFiesta(pobjFiesta){
-        this.fiestas.push(objFiesta);
-      }
+   
   }

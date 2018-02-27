@@ -8,8 +8,6 @@
   
     function servicioFiesta($log, $http){
   
-      let allFiestasProgramadas =[];
-  
       let publicAPI = {
         addFiesta : _addFiesta,
         getFiestas : _getFiestas
@@ -18,27 +16,31 @@
   
       // Funcion que almacena en el localStorage todas las fiestas programadas
       function _addFiesta(pnuevaFiesta){
-        allFiestasProgramadas = _getFiestas();
-        allFiestasProgramadas.push(pnuevaFiestaProgramada);
-        localStorage.setItem('lsFiestasProgramadas', JSON.stringify(allFiestasProgramadas));
+        let listaFiestas = _getFiestas();
+        listaFiestas.push(pnuevaFiesta);
+        localStorage.setItem('FiestasProgramadasLS', JSON.stringify(listaFiestas));
       }
   
       // Funcion que trae todas las fiestas programadas del localStorage y a partir de esos datos vuelve a crear un arreglo con todos los objetos de tipo fiesta
       function _getFiestas(){
-        let listaFiestas = JSON.parse(localStorage.getItem("lsFiestasProgramadas"));
+        let listaFiestas = [];
+        let listaFiestasLocal = JSON.parse(localStorage.getItem("FiestasProgramadasLS"));
   
-        if(listaFiestas == null){
-          allFiestasProgramadas = [];
+        if(listaFiestasLocal == null){
+          listaFiestas = [];
         }else{
-          listaFiestas.forEach(obj => {
+          listaFiestasLocal.forEach(obj => {
             
-            let objFiesta = new Fiesta(obj.fecha, obj.horas, obj.animador);
+            let objFiestas = new Fiesta(obj.fecha, obj.horas, obj.animador, obj.pago);
+            
   
-            allFiestasProgramadas.push(objFiesta)
+            listaFiestas.push(objFiestas)
           })
         }
   
-        return allFiestasProgramadas
+        return listaFiestas;
       }
+
+
     }
   })();
