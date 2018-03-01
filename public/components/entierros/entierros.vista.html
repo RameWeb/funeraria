@@ -1,66 +1,77 @@
-
-<div class="container my-4">
-    <h3>Agregar Entierro</h3>
+<div class="container h-100 my-5">
     <div class="row">
-      <form name="formRegistroEntierros" autocomplete="off" ng-submit="vm.registrarEntierro(vm.nuevoEntierro)" novalidate>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <div class="form-group">
-                <label for="formGroupExampleInput">Hora Inicio:</label>
-                <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaInicio">
-              </div>
-            </div>
-            <div class="col">
-              <div class="form-group">
-                <label for="formGroupExampleInput">Hora Final:</label>
-                <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaFinal">
-              </div>
-            </div>
-          </div>
-  
-          <div class="form-group">
-            <label for="formGroupExampleInput">Seleccione una fecha:</label>
-            <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.fecha">          
-          </div>
-  
-          <div class="form-group">
-            <label for="formGroupExampleInput">Seleccione un lugar:</label>
-            <select id="inputState" class="form-control" ng-model="vm.nuevoEntierro.lugar">
-              <option selected>- Seleccionar -</option>
-              <option>Cripta subterránea</option>
-              <option>Patio de los vecinos</option>
-              <option>Cementerio</option>
-              <option>Basurero</option>
-            </select>
-          </div>
-  
-          <!-- ng-click="vm.listarPrioridades('Baja')"> -->
-          
-          <div class="form-group">
-            <label for="formGroupExampleInput">Seleccione una prioridad:</label>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck1" ng-model="vm.nuevoEntierro.p1">
-              <label class="custom-control-label" for="customCheck1">Baja</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck2" ng-model="vm.nuevoEntierro.p2">
-              <label class="custom-control-label" for="customCheck2">Normal</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck3" ng-model="vm.nuevoEntierro.p3">
-              <label class="custom-control-label" for="customCheck3">Urgente</label>
-            </div>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="customCheck4" ng-model="vm.nuevoEntierro.p4">
-              <label class="custom-control-label" for="customCheck4">Inmediato</label>
-            </div>
-          </div>
-  
-          <button type="submit" class="btn btn-primary" ng-disabled="formRegustroUsuarios.$invalid ||formRegustroUsuarios.$error">Registrar</button>
-  
+      <div class="col-md-5">
+        <div>
+          <h5 class="display-4">Agregar Entierro</h5>
         </div>
-      </form>
+        <div class="my-4">
+          <form name="formRegistroEntierros" autocomplete="off" ng-submit="vm.registrarEntierro(vm.nuevoEntierro)" novalidate>
+            <div class="">
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Hora Inicio:</label>
+                    <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaInicio">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="formGroupExampleInput">Hora Final:</label>
+                    <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaFinal">
+                  </div>
+                </div>
+              </div>
+      
+              <div class="form-group">
+                <label for="formGroupExampleInput">Seleccione una fecha:</label>
+                <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.fecha">          
+              </div>
+      
+              <div class="form-group">
+                <label for="formGroupExampleInput">Seleccione un lugar:</label>
+                <select id="inputState" class="form-control" ng-model="vm.nuevoEntierro.lugar">
+                  <option>Cripta subterránea</option>
+                  <option>Patio de los vecinos</option>
+                  <option>Cementerio</option>
+                  <option>Basurero</option>
+                </select>
+              </div>
+      
+              <!-- ng-click="vm.listarPrioridades('Baja')"> -->
+              
+              <div class="form-group">
+                <label for="formGroupExampleInput">Seleccione una prioridad:</label>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input myCheckbox" id="customCheck1" ng-model="vm.nuevoEntierro.p1">
+                  <label class="custom-control-label" for="customCheck1">Baja</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input myCheckbox" id="customCheck2" ng-model="vm.nuevoEntierro.p2">
+                  <label class="custom-control-label" for="customCheck2">Normal</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input myCheckbox" id="customCheck3" ng-model="vm.nuevoEntierro.p3">
+                  <label class="custom-control-label" for="customCheck3">Urgente</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input myCheckbox" id="customCheck4" ng-model="vm.nuevoEntierro.p4">
+                  <label class="custom-control-label" for="customCheck4">Inmediato</label>
+                </div>
+              </div>
+      
+              <button type="submit" class="btn call" ng-disabled="formRegustroUsuarios.$invalid ||formRegustroUsuarios.$error">Registrar</button>
+      
+            </div>
+          </form>      
+        </div>
+        
+          
+      </div>
+
+      <div class="col-md-7 d-flex align-items-center justify-content-center">
+        <img src="../../icons/038-skull-2.svg" alt="" class="img-fluid" height="500px" width="500px">
+      </div>
+      
     </div>
   </div>
   

@@ -1,0 +1,23 @@
+.gray{
+  background-color: #2B2B2B;
+  color: #fff;
+}
+
+.call{
+  background-color: #FC427B;
+  color: #fff;
+}
+
+/* input.myCheckbox[type=checkbox] + label:before {
+} */
+
+input.myCheckbox[type=checkbox]:checked + label:before{
+  background-color: #FC427B !important;
+}
+
+input,select{
+  background-color: #222222 !important;
+  color: #FC427B !important;
+  border: none !important;
+}
+
