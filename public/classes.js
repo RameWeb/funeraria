@@ -4,7 +4,7 @@ class Fiesta{
       this.horas = pCantidadHoras;
       this.animador=pAnimador;
       this.pago=pPago;
-      
+      this.animador = [];
     }
    
   }

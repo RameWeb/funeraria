@@ -33,7 +33,7 @@
             
             let objFiestas = new Fiesta(obj.fecha, obj.horas, obj.animador, obj.pago);
             
-  
+            
             listaFiestas.push(objFiestas)
           })
         }
