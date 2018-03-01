@@ -10,8 +10,8 @@
                 <div class="type">
                     <p>Sesión de maquillaje</p>
                 </div>
-                <button ng-click="showme1=true" ng-hide="showme1" class="btn btn-light" onclick="add('Maquillaje')">Agregar</button> 
-                <button ng-show="showme1" ng-click="showme1=false" class="btn btn-light" onclick="remove('Maquillaje')">Eliminar</button> 
+                <button ng-click="showme1=true" ng-hide="showme1" class="btn btn-light" onclick="hola('Jason')">Agregar</button> 
+                <button ng-show="showme1" ng-click="showme1=false" class="btn btn-light" onclick="remove('Maquillaje', 150)">Eliminar</button> 
             </div>
         </div>
     </div>
@@ -26,8 +26,8 @@
                 <p>Sesión de peluqería</p>
             </div>
             <div>
-                <button ng-click="showme2=true" ng-hide="showme2" class="btn btn-light" onclick="vm.add('Peluqueria')">Agregar</button> 
-                <button ng-show="showme2" ng-click="showme2=false" class="btn btn-light" onclick="vm.remove('Peluqueria')">Eliminar</button>
+                <button ng-click="showme2=true" ng-hide="showme2" class="btn btn-light" onclick="add('Peluqueria' , 100)">Agregar</button> 
+                <button ng-show="showme2" ng-click="showme2=false" class="btn btn-light" onclick="remove('Peluqueria', 100)">Eliminar</button>
               </div>
             </div>
         </div>
@@ -42,8 +42,8 @@
                 <div class="type">
                     <p>Sesión de costura</p>
                 </div>
-                <button ng-click="showme3=true" ng-hide="showme3" class="btn btn-light" onclick="vm.add('Costura')">Agregar</button> 
-                <button ng-show="showme3" ng-click="showme3=false" class="btn btn-light" onclick="vm.remove('Costura')">Eliminar</button>
+                <button ng-click="showme3=true" ng-hide="showme3" class="btn btn-light" onclick="add('Costura', 250)">Agregar</button> 
+                <button ng-show="showme3" ng-click="showme3=false" class="btn btn-light" onclick="remove('Costura', 250)">Eliminar</button>
 
             </div>
         </div>

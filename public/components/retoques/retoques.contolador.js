@@ -7,6 +7,7 @@
 
   // controladorRetoques.$inject = ['servicioDifuntos']
 
+
   function controladorRetoques(){
     let vm = this;
 
@@ -14,18 +15,16 @@
 
     let listaRetoques = [];
 
-    vm.add = function(parametro){
-        listaRetoques.retoques.push(parametro);
+    let add = function(pTipoRetoque, pCosto){
+        listaRetoques.retoques.push(pTipoRetoque, pCosto);
         console.log(listaRetoques);
       }   
 
-    vm.remove = function(parametro){
-      let tipo = parametro;
-      if (tipo == 'Maquillaje' || tipo == 'Peluqueria' || tipo == 'Costura') {
-        listaRetoques.retoques.pop();
+    let remove = function(pTipoRetoque, pCosto){
+        listaRetoques.retoques.pop(parametro);
+        console.log(listaRetoques);
       }
-      console.log(listaRetoques);
-    }
+
 
   }
 })();
