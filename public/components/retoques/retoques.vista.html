@@ -1,61 +1,52 @@
 
 <div class="container">           
-  <d    iv class="row db-padding-btm db-attached">
-    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" class="h-100">
+  <div class="row db-padding-btm db-attached">
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
         <div class="db-wrapper">
             <div class="db-pricing-eleven db-bk-color-one">
                 <div class="price">
-                    <sup>$</sup>150
+                    <p>$150</p>
                 </div>
                 <div class="type">
-                    <p>Sesión de peluquería</p>
+                    <p>Sesión de maquillaje</p>
                 </div>
-                <div class="btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-secondary active">
-                      <input type="checkbox" autocomplete="off"> Checked
-                    </label>
-                  </div>
+                <button ng-click="showme1=true" ng-hide="showme1" class="btn btn-light" onclick="add('Maquillaje')">Agregar</button> 
+                <button ng-show="showme1" ng-click="showme1=false" class="btn btn-light" onclick="remove('Maquillaje')">Eliminar</button> 
             </div>
         </div>
     </div>
     
-    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" class="h-100">
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
         <div class="db-wrapper">
             <div class="db-pricing-eleven db-bk-color-two popular">
                 <div class="price">
-                    <sup>$</sup>199
+                    <p>$100</p>
                 </div>
             <div class="type">
                 <p>Sesión de peluqería</p>
             </div>
-            <div class="btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="checkbox" autocomplete="off"> Checked
-                </label>
+            <div>
+                <button ng-click="showme2=true" ng-hide="showme2" class="btn btn-light" onclick="vm.add('Peluqueria')">Agregar</button> 
+                <button ng-show="showme2" ng-click="showme2=false" class="btn btn-light" onclick="vm.remove('Peluqueria')">Eliminar</button>
               </div>
             </div>
         </div>
     </div>
     
-    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 " class="h-100">
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 ">
         <div class="db-wrapper">
             <div class="db-pricing-eleven db-bk-color-three">
                 <div class="price">
-                    <sup>$</sup>200
+                    <p>$250</p>
                 </div>
                 <div class="type">
                     <p>Sesión de costura</p>
                 </div>
-                <a href="" ng-click="showme=true">Show</a>
-                <button ng-click="showme=false">Hide</button> 
-                
-                <div class="wrapper">
-                  <p ng-hide="showme">It will appear here!</p>
-                  <h2 ng-show="showme">This is mah content, yo!</h2>
-                </div>
+                <button ng-click="showme3=true" ng-hide="showme3" class="btn btn-light" onclick="vm.add('Costura')">Agregar</button> 
+                <button ng-show="showme3" ng-click="showme3=false" class="btn btn-light" onclick="vm.remove('Costura')">Eliminar</button>
 
             </div>
         </div>
-    </div>
+    </div>  
     </div>
 </div>

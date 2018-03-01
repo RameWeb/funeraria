@@ -28,14 +28,13 @@
     .state('retoques', {
       url:'/retoques',
       templateUrl: './components/retoques/retoques.vista.html',
-
+      
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
           return $ocLazyLoad.load('./components/retoques/retoques.contolador.js')
         }]
       },
-
-      css: './components/retoques/retoques.estilo.css',
+      // css: './components/retoques/retoques.estilo.css',
       controller: 'controladorRetoques',
       controllerAs: 'vm'
     })

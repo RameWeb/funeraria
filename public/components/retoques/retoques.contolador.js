@@ -1,41 +1,31 @@
-(() => {
-    'use strict';
-    angular
-    .module('labFuneraria')
-    .controller('controladorRetoques', controladorRetoques);
-  
-    controladorRetoques.$inject = ['servicioRetoques'];
-  
-    function controladorRetoques(servicioRetoques){
-      let vm = this;
-  
-      vm.nuevoRetoque = {};
-  
-      // Funcion que es llamda desde el html para regustra un nuevo usuario
-      vm.registrarRetoque = (pnuevoRetoque) => {
-  
-        // Tomamos el objeto sin formato y lo comvertimos en un objeto de tipo cliente
-        let objNuevoRetoque = new Cliente(pnuevoRetoque.tipo, pnuevoRetoque.costo);
-  
-        console.log('objeto sin formato');
-        console.log(pnuevoRetoque);
-  
-        console.log('---------')
-  
-        console.log('objeto con formato');
-        console.log(objNuevoRetoque);
-  
-        // Pasamos al servicio el nuevo obj de tipo cliente para ser almacenado en el localStorage
-        servicioRetoques.addRetoque(pnuevoRetoque)
-  
-        // // Retroalimentacion Visual para los usuarios
-        // swal("Registro exitoso", "El usuario ha sido registrado correctamente", "success", {
-        //   button: "Aceptar",
-        // });
-  
-        // Se limpia el formulario
-        vm.nuevoUsuario = null;
+(() =>{
+
+  'use strict';
+  angular
+  .module('labFuneraria')
+  .controller('controladorRetoques', controladorRetoques);
+
+  // controladorRetoques.$inject = ['servicioDifuntos']
+
+  function controladorRetoques(){
+    let vm = this;
+
+    let listaUsuarios = [{nombre: 'Camila', apodo:'Cami', retoques:[]}];
+
+    let listaRetoques = [];
+
+    vm.add = function(parametro){
+        listaRetoques.retoques.push(parametro);
+        console.log(listaRetoques);
+      }   
+
+    vm.remove = function(parametro){
+      let tipo = parametro;
+      if (tipo == 'Maquillaje' || tipo == 'Peluqueria' || tipo == 'Costura') {
+        listaRetoques.retoques.pop();
       }
-  
+      console.log(listaRetoques);
     }
-  })();
+
+  }
+})();
