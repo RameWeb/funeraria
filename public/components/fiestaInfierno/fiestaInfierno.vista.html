@@ -9,18 +9,27 @@
         <input type="number" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
       </div>
       <div class="form-action">
-          <label for="">Animadores</label>
+          <label for="">Seleccione uno o varios animadores</label> <br>
+          
           <select name="Animadores"id="animador"ng-model="vm.nuevaFiesta.animador" required>
               <option value="Payasita Pilar la Bonachona">Payasita Pilar la Bonachona</option>
               <option value="Maromero Andrey  ">Maromero Andrey  </option>
+              <form action="/action_page.php">
+                <label for="">Seleccione uno o varios animadores</label> <br>
+                <input type="checkbox" name="vehicle1" value="Bike"> Payasita Pilar la Bonachona.
+                <br>
+                <input type="checkbox" name="vehicle2" value="Car">Maromero Andrey  el dueño de las bolsas.
+                <br><br>
+              
+                </form> 
               
             </select>
-            
+            <button type="button" class="btn btn-primary" ng-click="vm.registrarAnimador">Agregar un nuevo animador</button>
         </div>
         <div class="form-action">
-          <label for="">Efectivo"</label>
+          <label for="">Efectivo</label>
           <input type="radio" name="metodoPago" value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
-          <label for="">Tarjeta"</label>
+          <label for="">Tarjeta</label>
           <input type="radio" name="metodoPago" value="Tarjeta" ng-model="vm.nuevaFiesta.pago" required> 
           
          </div>

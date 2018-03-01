@@ -8,3 +8,12 @@ class Fiesta{
     }
    
   }
+
+  class Animador{
+    constructor(pNombreAnimador, pCosto){
+      this.nombreAnimador = pNombreAnimador;
+      this.costo = pCosto;
+      
+    }
+   
+  }

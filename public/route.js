@@ -21,7 +21,6 @@
       url: '/',
       // Se convoca al html
       templateUrl: './components/landing-page/landing-page.view.html',
-      // se convoca el css
       css: './components/landing-page/landong-page.style.css'
     })
     .state('registroFiesta', {
@@ -35,7 +34,18 @@
       controller:'controladorFiesta',
       controllerAs:'vm'
     })
-    
+
+    .state('registroAnimador', {
+      url: '/registrarUnAnimador',
+      templateUrl: './components/Animadores/animadores.vista.html',
+      resolve:{
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/Animadores/animadores.controlador.js')
+        }]
+      },
+      controller:'controladorAnimadores',
+      controllerAs:'vm'
+    })
 
 
     $urlRouterProvider.otherwise('/');
