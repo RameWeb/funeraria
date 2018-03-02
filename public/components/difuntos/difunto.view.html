@@ -1,0 +1,52 @@
+<h1>Difuntos a nombre de {{vm.usuarioActivo}}</h1>
+
+<div class="col-4 my-3">
+
+    <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
+
+      <div class="form-group">
+        <label for="">Modelo del Difunto</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.modelo">
+      </div>
+
+      <div class="form-group">
+        <label for="">Matricula</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.matricula">
+      </div>
+
+      <div class="form-group">
+        <label for="">Marca del Difunto</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.marca">
+      </div>
+
+      <button type="submit" class="btn btn-success">Registrar</button>
+
+      <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
+
+    </form>
+
+</div>
+
+<div class="col-9">
+  <table class="table">
+    <thead>
+        <tr>
+          <th>Modelo</th>
+          <th>Matricula</th>
+          <th>Marca</th>
+          <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="difunto in vm.listaDifuntos">
+        <td>{{difunto.modelo}}</td>
+        <td>{{difunto.matricula}}</td>
+        <td>{{difunto.marca}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(difunto)">Reparaciones</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
