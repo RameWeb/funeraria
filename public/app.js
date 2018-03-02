@@ -1,5 +1,7 @@
 (() => {
   'use strict';
+  // Estamos llamando al framework e inicializando un modulo
   angular
-  .module('labFuneraria', ['appRoutes'])
+  // Es el modulo que esta en el ng-app (Inyeccion directa)
+  .module('arquitectura', ['appRoutes']);
 })();
