@@ -26,10 +26,12 @@
     })
 
     .state('retoques', {
-      url:'/retoques',
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/retoques',
+      // Se convoca al html
       templateUrl: './components/retoques/retoques.vista.html',
+      // se convoca el css
       css: './components/retoques/retoques.estilo.css',
-
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
           return $ocLazyLoad.load('./components/retoques/retoques.contolador.js')

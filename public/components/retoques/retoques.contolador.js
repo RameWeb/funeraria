@@ -1,30 +1,33 @@
-(() =>{
 
+(() => {
   'use strict';
   angular
   .module('labFuneraria')
   .controller('controladorRetoques', controladorRetoques);
 
-  // controladorRetoques.$inject = ['servicioDifuntos']
-
-
   function controladorRetoques(){
     let vm = this;
-
-    let listaUsuarios = [{nombre: 'Camila', apodo:'Cami', retoques:[]}];
+    
+    // let listaUsuarios = [{nombre: 'Camila', apodo:'Cami', retoques:[]}];
 
     let listaRetoques = [];
 
-    let add = function(pTipoRetoque, pCosto){
-        listaRetoques.retoques.push(pTipoRetoque, pCosto);
-        console.log(listaRetoques);
-      }   
-
-    let remove = function(pTipoRetoque, pCosto){
-        listaRetoques.retoques.pop(parametro);
-        console.log(listaRetoques);
+    vm.add = function (parametro1, parametro2){
+      let retoques = {
+        descripcion : parametro1,
+        costo : parametro2
       }
+     listaRetoques.push(retoques);
+     console.log(listaRetoques);
+    }   
 
-
+    vm.remove = function (parametro1, parametro2){
+      let retoques = {
+        descripcion : parametro1,
+        costo : parametro2
+      }
+      listaRetoques.splice(parametro1,parametro2);
+      console.log(listaRetoques);
+    }
   }
 })();
