@@ -9,13 +9,13 @@
     function controladorAnimadores($stateParams, $state, servicioAnimador){
       let vm = this;
       vm.nuevoAnimador = {};
-      vm.listaAnimadores=listarAnimadores();
+      vm.listaAnimadores = listarAnimadores();
       listarAnimadores();
   
       //  registrar una nueva fiesta desde el html
       vm.registrarAnimador = (pnuevoAnimador) => {
         console.log(pnuevoAnimador);
-        let objNuevoAnimador = new Animador(pnuevoAnimador.nombreAnimador,pnuevoAnimador.costo );
+        let objNuevoAnimador = new Animador(pnuevoAnimador.nombreAnimador, pnuevoAnimador.costo );
   
         console.log('Objeto con el animador');
         console.log(objNuevoAnimador);

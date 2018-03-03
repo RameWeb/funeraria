@@ -26,14 +26,13 @@
         let listaAnimadores = [];
         let listaAnimadoresLocal = JSON.parse(localStorage.getItem("AnimadoresLS"));
   
-        if(listaAnimadoresLocal == null){
+        if(!listaAnimadoresLocal){
           listaAnimadores = [];
         }else{
           listaAnimadoresLocal.forEach(obj => {
             
             let objAnimadores = new Animador(obj.nombreAnimador, obj.costo);
             
-  
             listaAnimadores.push(objAnimadores)
           })
         }

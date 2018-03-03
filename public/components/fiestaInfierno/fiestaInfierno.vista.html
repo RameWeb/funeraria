@@ -11,18 +11,18 @@
       <div class="form-action">
         
           
-          <div class="form-group">
-            <label for="exampleFormControlSelect1">Seleccione uno o varios animadores</label>
-            <select class="form-control" id="exampleFormControlSelect1" ng-repeat="animador in vm.listaAnimadores">
-              <option>{{animador.nombreAnimador}}</option>
-              <option>{{animador.nombreAnimador}}</option>
-              <option>{{animador.nombreAnimador}}</option>
-              <option>{{animador.nombreAnimador}}</option>
-              <option>{{animador.nombreAnimador}}</option>
-            </select>
-            <button type="button" class="btn btn-primary" ng-click="vm.registrarAnimador">Agregar un nuevo animador</button>
+        <div class="form-group">
+
+          <label ng-repeat="animador in vm.listaAnimadores">
+
+            <input type="checkbox" data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
+            
+          </label>
+
         </div>
         <div class="form-action">
+            <label for="">Seleccione su metodo de pago</label><br>
+
           <label for="">Efectivo</label>
           <input type="radio" name="metodoPago" value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
           <label for="">Tarjeta</label>
@@ -46,10 +46,10 @@
     </thead>
     <tbody>
       <tr ng-repeat="fiesta in vm.listaFiestas">
-        <td>{{fiesta.fecha}}</td>
+        <td>{{fiesta.getFecha()}}</td>
         <td>{{fiesta.horas}}</td>
-        <td>{{fiesta.animador}}</td>
         <td>{{fiesta.pago}}</td>
+        <td>{{fiesta.getAnimadores()}}</td>
         
       </tr>
     </tbody>

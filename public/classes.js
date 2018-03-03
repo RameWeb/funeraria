@@ -1,19 +1,27 @@
 class Fiesta{
-    constructor(pFecha, pCantidadHoras,pAnimador,pPago){
-      this.fecha = pFecha;
-      this.horas = pCantidadHoras;
-      this.animador=pAnimador;
-      this.pago=pPago;
-      this.animador = [];
-    }
-   
+  constructor(pFecha, pCantidadHoras, pPago){
+    this.fecha = pFecha;
+    this.horas = pCantidadHoras;
+    this.pago=pPago;
+    this.animadores = [];
+  }
+  
+  setAnimador(panimador){
+    this.animadores.push(panimador);
   }
 
-  class Animador{
-    constructor(pNombreAnimador, pCosto){
-      this.nombreAnimador = pNombreAnimador;
-      this.costo = pCosto;
-      
-    }
-   
+  getAnimadores() {
+    return this.animadores;
   }
+
+  getFecha(){
+    return `${this.fecha.getDay()}/${this.fecha.getMonth()}/${this.fecha.getYear()}`;
+  }
+}
+
+class Animador{
+  constructor(pNombreAnimador, pCosto){
+    this.nombreAnimador = pNombreAnimador;
+    this.costo = pCosto;
+  }
+}

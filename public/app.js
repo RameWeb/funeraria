@@ -1,5 +1,5 @@
 (() => {
   'use strict';
   angular
-  .module('labFuneraria', ['appRoutes'])
+  .module('labFuneraria', ['appRoutes', 'checklist-model'])
 })();
