@@ -32,11 +32,11 @@
           let fecha = new Date(obj.fecha)
           let objFiestas = new Fiesta(fecha, obj.horas, obj.animador, obj.pago);
 
-          // obj.animadores.forEach(objanimador =>{
-          //   let objAnimadorTemp = new Animador(objAnimador.nombreAnimador,objAnimador.costo);
+          obj.animadores.forEach(objanimador =>{
+            let objAnimadorTemp = new Animador(objanimador.nombreAnimador,objanimador.costo);
 
-          //   objFiestas.setAnimador(objAnimadorTemp);
-          // });
+            objFiestas.setAnimador(objAnimadorTemp);
+          });
 
           listaFiestas.push(objFiestas);
         });

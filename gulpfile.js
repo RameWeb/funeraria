@@ -29,7 +29,7 @@ gulp.task('dependencies', () => {
   // Trae angular, jquery y popper desde las dependencias y lo copia dentro de public para poder ser utilizado por el front-end
   gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/popper.js/dist/popper.min.js',
+    './node_modules/popper.js/dist/umd/popper.min.js',
     './node_modules/sweetalert/dist/sweetalert.min.js',
     './node_modules/angular/angular.min.js',
     './node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',

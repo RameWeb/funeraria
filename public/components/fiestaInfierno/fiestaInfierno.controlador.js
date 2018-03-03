@@ -20,6 +20,10 @@
       console.log(pnuevaFiesta);
       let objNuevaFiesta = new Fiesta(pnuevaFiesta.fecha,pnuevaFiesta.horas, pnuevaFiesta.pago);
 
+      for(let i = 0; i < vm.animadores.length; i++){
+        objNuevaFiesta.setAnimador(vm.animadores[i]);
+      }
+
       console.log('Objeto con la fiesta');
       console.log(objNuevaFiesta);
       // Pasamos al servicio el nuevo obj de tipo cliente para ser almacenado en el localStorage
