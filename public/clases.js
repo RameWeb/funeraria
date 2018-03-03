@@ -1,18 +1,10 @@
 // TODO Dentro de este archivo se crean los objetos con sus respectivos métodos
 class Cliente{
-  constructor(pFoto,pCedula,pNombre,pApellido,pFechanacimiento,pSexo,pUbicacion,pProvincia,pCanton,pDistrito,pUsuario,pContrasenna){
-    this.foto = pFoto;
+  constructor(pCedula, pNombre1, pApellido1, pEdad){
     this.cedula = pCedula;
-    this.nombre = pNombre;
-    this.apellido = pApellido;
-    this.fechanacimiento = pFechanacimiento;
-    this.sexo = pSexo;
-    this.ubicacion = pUbicacion;
-    this.provincia = pProvincia;
-    this.canton = pCanton;
-    this.distrito = pDistrito;
-    this.usuario = pUsuario;
-    this.contrasenna = pContrasenna;
+    this.nombre1 = pNombre1;
+    this.apellido1 = pApellido1;
+    this.edad = pEdad;
     this.difuntos = [];
   }
 
@@ -24,14 +16,13 @@ class Cliente{
     return this.difuntos;
   }
 
-  getCedula(){
+  getcedula(){
     return this.cedula;
   }
 
   getNombre(){
-    return `${this.nombre} ${this.apellido}`;
+    return `${this.nombre1} ${this.apellido1}`;
   }
-
 }
 
 class Difuntos{
@@ -54,5 +45,4 @@ class Difuntos{
     return `${this.apodo} ${this.edad}`;
   }
 }
-
 

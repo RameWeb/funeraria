@@ -12,7 +12,7 @@
         url: '/',
         templateUrl: './components/landingPage/landingPage.view.html',
         data:{
-          pageTitle: 'Inicio | Ejemplo Arquitectura'
+          pageTitle: 'Inicio | Funeraria el vals de los muertos'
         }
       })
 
@@ -49,23 +49,7 @@
         controllerAs: 'vm'
       })
 
-      .state('reparaciones', {
-        url: '/works',
-        templateUrl: 'components/reparaciones/reparaciones.view.html',
-        data:{
-          pageTitle: 'Registro reparaciones | Ejemplo Arquitectura'
-        },
-        params: {
-          objDifuntoTemp: ''
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/reparaciones/reparaciones.controller.js')
-          }]
-        },
-        controller: 'controladorReparaciones',
-        controllerAs: 'vm'
-      });
+      
 
     $urlRouterProvider.otherwise('/users');
   };

@@ -1,26 +1,26 @@
 (() => {
   'use strict';
   angular
-  .module('arquitectura')
+  .module('lab-funeraria')
   .controller('controladorUsuarios', controladorUsuarios);
 
   controladorUsuarios.$inject = ['$stateParams', '$state', 'servicioUsuarios'];
 
   function controladorUsuarios($stateParams, $state, servicioUsuarios){
-
     let vm = this;
 
     vm.nuevoUsuario = {};
     vm.listaUsuarios = listarUsuarios();
 
     listarUsuarios();
-    // Función que es llamada desde el html para registra un nuevo usuario
+    // Función que es llamda desde el html para registra un nuevo usuario
     vm.registrarUsuario = (pnuevoUsuario) => {
 
       console.log(pnuevoUsuario);
 
-      // Tomamos el objeto sin formato y lo convertimos en una instancia de la clase cliente
-      let objNuevoUsuario = new Cliente(pnuevoUsuario.foto,pnuevoUsuario.cedula,pnuevoUsuario.nombre,pnuevoUsuario.apellido,pnuevoUsuario.fechanacimiento,pnuevoUsuario.sexo,pnuevoUsuario.ubicacion,pnuevoUsuario.provincia,pnuevoUsuario.canton,pnuevoUsuario.distrito,pnuevoUsuario.usuario,pnuevoUsuario.contrasenna);
+      // Tomamos el objeto sin formato y lo comvertimos en una instancia de la clase cliente
+      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.apellido1, pnuevoUsuario.edad);
+
      
       console.log('objeto con usuario');
       console.log(objNuevoUsuario);
@@ -38,7 +38,7 @@
       listarUsuarios();
     }
 
-    vm.registrarDifunto = (pusuario) => {
+    vm.registrarDifuntos = (pusuario) => {
       // console.log(pusuario);
 
       $state.go('difuntos', { objUsuarioTemp : JSON.stringify(pusuario)});
@@ -47,6 +47,8 @@
     function listarUsuarios() {
       vm.listaUsuarios = servicioUsuarios.getUsuarios();
     }
+
+    
 
   }
 })();

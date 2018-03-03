@@ -1,14 +1,10 @@
 {
-  "name": "arquitectura",
+  "name": "lab-funeraria",
   "version": "1.0.0",
-  "description": "Arquitectura de proyecto",
+  "description": "laboratorio de funeraria",
   "main": "./public/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1.git"
   },
   "keywords": [
     "MEAN",
@@ -18,15 +14,9 @@
     "NODEJS"
   ],
   "author": {
-    "name": "Kevin Aguilar",
-    "email": "kaguilara@ucenfotec.ac.cr",
-    "url": "https://twitter.com/kaguilara_"
+    "name": "Rame"
   },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1/issues"
-  },
-  "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
