@@ -11,8 +11,8 @@
                     <p>Sesión de maquillaje</p>
                 </div>
 
-                <button ng-click="vm.add('Maquillaje' , 150)" class="btn btn-light">Agregar</button> 
-                <button ng-click="vm.remove('Maquillaje', 150)" class="btn btn-light">Eliminar</button>
+                <button ng-click="vm.add('Maquillaje' , 150)" ng-show="vm.btnAgregarMaquillaje == true" class="btn btn-light">Agregar</button> 
+                <button ng-click="vm.remove('Maquillaje')" ng-show="vm.btnAgregarMaquillaje == false"  class="btn btn-light">Eliminar</button>
             </div>
         </div>
     </div>
@@ -28,8 +28,8 @@
             </div>
             <div>
 
-            <button ng-click="vm.add('Peluquería' , 100)" class="btn btn-light">Agregar</button> 
-            <button ng-click="vm.remove('Peluquería', 100)" class="btn btn-light">Eliminar</button>
+            <button ng-click="vm.add('Peluquería' , 100)" ng-show="vm.btnAgregarPeluqueria == true" class="btn btn-light">Agregar</button> 
+            <button ng-click="vm.remove('Peluquería')" ng-show="vm.btnAgregarPeluqueria == false" class="btn btn-light">Eliminar</button>
               </div>
             </div>
         </div>
@@ -45,8 +45,8 @@
                     <p>Sesión de costura</p>
                 </div>
 
-            <button ng-click="vm.add('Costura' , 250)" class="btn btn-light">Agregar</button> 
-            <button ng-click="vm.remove('Costura', 250)" class="btn btn-light">Eliminar</button>
+            <button ng-click="vm.add('Costura' , 250)" ng-show="vm.btnAgregarCostura == true" class="btn btn-light">Agregar</button> 
+            <button ng-click="vm.remove('Costura')" ng-show="vm.btnAgregarCostura == false" class="btn btn-light">Eliminar</button>
 
             </div>
         </div>

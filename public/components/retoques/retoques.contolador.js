@@ -12,7 +12,24 @@
 
     let listaRetoques = [];
 
+    vm.btnAgregarMaquillaje = true;
+    vm.btnAgregarPeluqueria = true;
+    vm.btnAgregarCostura = true;
+
     vm.add = function (parametro1, parametro2){
+
+      if(parametro1 == 'Maquillaje'){
+        vm.btnAgregarMaquillaje = false;
+      }
+
+      if(parametro1 == 'Peluquería'){
+        vm.btnAgregarPeluqueria = false;
+      }
+
+      if(parametro1 == 'Costura'){
+        vm.btnAgregarCostura = false;
+      }
+
       let retoques = {
         descripcion : parametro1,
         costo : parametro2
@@ -21,12 +38,26 @@
      console.log(listaRetoques);
     }   
 
-    vm.remove = function (parametro1, parametro2){
-      let retoques = {
-        descripcion : parametro1,
-        costo : parametro2
+    vm.remove = function (parametro1){
+
+      if(parametro1 == 'Maquillaje'){
+      vm.btnAgregarMaquillaje = true;
       }
-      listaRetoques.splice(parametro1,parametro2);
+
+      if(parametro1 == 'Peluquería'){
+        vm.btnAgregarPeluqueria = true;
+      }
+
+      if(parametro1 == 'Costura'){
+        vm.btnAgregarCostura = true;
+      }
+
+
+      for(let i=0; i<listaRetoques.length; i++ ){
+        if(parametro1 == listaRetoques[i].descripcion){
+          listaRetoques.splice(i,1);
+        }
+      };
       console.log(listaRetoques);
     }
   }
