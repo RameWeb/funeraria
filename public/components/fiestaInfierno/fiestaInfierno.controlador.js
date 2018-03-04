@@ -41,6 +41,7 @@
     
     function listarFiestas(){
       vm.listaFiestas= servicioFiesta.getFiestas();
+      
     }
 
     function listarAnimadores(){

@@ -1,5 +1,6 @@
 class Fiesta{
   constructor(pFecha, pCantidadHoras, pPago){
+    
     this.fecha = pFecha;
     this.horas = pCantidadHoras;
     this.pago=pPago;
