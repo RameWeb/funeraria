@@ -28,7 +28,7 @@
 
     vm.registrarDifuntos = (pnuevodifuntos) => {
 
-      let objDifuntosNuevo = new Difuntos(pnuevodifuntos.apodo, pnuevodifuntos.edad, pnuevodifuntos.sexo, pnuevodifuntos.tamanno);
+      let objDifuntosNuevo = new Difuntos(pnuevodifuntos.apodo, pnuevodifuntos.edad, pnuevodifuntos.sexo, pnuevodifuntos.tamanno, pnuevodifuntos.idlapida);
 
       servicioUsuarios.addDifuntos(objDifuntosNuevo, objUsuario);
 

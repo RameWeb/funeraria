@@ -45,6 +45,7 @@
             return $ocLazyLoad.load('./components/difuntos/difuntos.controlador.js')
           }]
         },
+        css: './components/difuntos/difuntos.estilos.css',
         controller: 'controladorDifuntos',
         controllerAs: 'vm'
       })

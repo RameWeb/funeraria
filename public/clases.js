@@ -26,11 +26,12 @@ class Cliente{
 }
 
 class Difuntos{
-  constructor(papodo, pedad, psexo, ptamanno){
+  constructor(papodo, pedad, psexo, ptamanno, pidlapida){
     this.apodo = papodo;
     this.edad = pedad;
     this.sexo = psexo;
     this.tamanno = ptamanno;
+    this.idlapida = pidlapida; 
     this.entierros = [];
     this.retoque = [];
     this.fiesta = [];
@@ -38,6 +39,9 @@ class Difuntos{
   }
 
  
+  getidlapida(){
+    return this.idlapida;
+  }
 
  
 
