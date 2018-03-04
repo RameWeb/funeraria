@@ -37,7 +37,7 @@
           let objUsuarios = new Cliente(obj.cedula, obj.nombre1, obj.apellido1, obj.edad);
 
           obj.difuntos.forEach(objDifuntos => {
-            let objTempDifuntos = new Difuntos(objDifuntos.apodo, objDifuntos.edad, objDifuntos.sexo, objDifuntos.tamanno);
+            let objTempDifuntos = new Difuntos(objDifuntos.apodo, objDifuntos.edad, objDifuntos.sexo, objDifuntos.tamanno, objDifuntos.idlapida);
 
             objUsuarios.agregarDifuntos(objTempDifuntos);
 
