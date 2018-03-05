@@ -1,5 +1,5 @@
 <div>
-    <form ng-submit="vm.registrarAnimador(vm.nuevoAnimador)">
+    <form ng-submit="vm.registrarAnimador(vm.nuevoAnimador)" class="Animadores"> 
       <div class="form-action">
         <label for="">Nombre del animador</label>
         <input type="text"id="nombreAnimador" ng-model="vm.nuevoAnimador.nombreAnimador"  required>
@@ -12,9 +12,9 @@
     </form>
 </div>
 
-<div class="form-group">
+<div class="Animador">
   <label for="exampleFormControlSelect2">Example multiple select</label>
-  <select multiple class="form-control" id="exampleFormControlSelect2" >
+  <select multiple class="form-control" id="exampleFormControlSelect2"  >
     <option ng-repeat="animador in vm.listaAnimadores">{{animador.nombreAnimador }}</option>
  
   </select>

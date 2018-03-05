@@ -1,4 +1,4 @@
-<div>
+<div class="gray">
   <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
     <div class="form-action">
       <label for="">Fecha de la Fiesta</label>
@@ -6,7 +6,7 @@
     </div>
     <div class="form-action">
         <label for="">Cantidad de horas</label>
-        <input type="number" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
+        <input type="number" class="myInput" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
       </div>
       <div class="form-action">
         
@@ -14,8 +14,9 @@
         <div class="form-group">
 
           <label ng-repeat="animador in vm.listaAnimadores">
+            
 
-            <input type="checkbox" data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
+            <input type="checkbox"  data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
             
           </label>
 
