@@ -58,8 +58,8 @@ gulp.task('reload', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
+  gulp.watch([paths.views, paths.styles,paths.js], ['reload'])
     .on('change', browserSync.reload);
 });
 
-gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'watch']);
+gulp.task('default', ['connect', 'dependencies', 'reload', 'watch']);
