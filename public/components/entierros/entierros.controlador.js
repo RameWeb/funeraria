@@ -10,12 +10,6 @@
     let vm = this;
 
     vm.nuevoEntierro = {};
-
-    // vm.listarPrioridades = function(pprioridad){
-    //   vm.listaPrioridades.push(pprioridad);
-    //   console.log(vm.listaPrioridades);
-    //   return vm.listaPrioridades;
-    // 
     
     vm.listarPrioridades = function (p1,p2,p3,p4){
       let listaPrioridades = [];

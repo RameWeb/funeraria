@@ -1,6 +1,15 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.headlines{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
 .gray{
   background-color: #2B2B2B;
   color: #fff;
+  border: none;
 }
 .call{
   background-color: #FC427B;
@@ -9,8 +18,60 @@
 input.myCheckbox[type=checkbox]:checked + label:before{
   background-color: #FC427B !important;
 }
-input,select{
+input.myInput, select.mySelect{
   background-color: #222222 !important;
   color: #FC427B !important;
   border: none !important;
+}
+hr{
+  color: #f6f6f6;
+}
+
+.btnAction{
+  background-color: #FFD655;
+  color: #000;
+}
+.pinkNav{
+  background-color: #ED5E78;
+  height: 65px;
+}
+a.myNavLinks{
+  font-weight: 700;
+  font-size: 1em;
+}
+.cover{
+  background-image: url("../../icons/herofuneraria.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.jumboContent{
+  color: #2B2B2B;
+  font-size: 4em;
+}
+
+#servicios, #testimonios{
+  margin-top: 150px;
+}
+
+.ourServices{
+  background-color: #f6f6f6;
+  border: 5px solid #e67e22;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.ourTestimonies{
+  background-color: #f6f6f6;
+  border: 5px solid #85E3CD;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.content{
+  font-weight: 300;
 }

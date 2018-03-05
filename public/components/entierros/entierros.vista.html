@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-md-5">
         <div>
-          <h5 class="display-4">Agregar Entierro</h5>
+          <h2 class="headlines">Agregar Entierro</h2>
         </div>
         <div class="my-4">
           <form name="formRegistroEntierros" autocomplete="off" ng-submit="vm.registrarEntierro(vm.nuevoEntierro)" novalidate>
@@ -11,25 +11,25 @@
                 <div class="col">
                   <div class="form-group">
                     <label for="formGroupExampleInput">Hora Inicio:</label>
-                    <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaInicio">
+                    <input type="time" class="form-control myInput" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaInicio">
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-group">
                     <label for="formGroupExampleInput">Hora Final:</label>
-                    <input type="time" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaFinal">
+                    <input type="time" class="form-control myInput" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.horaFinal">
                   </div>
                 </div>
               </div>
       
               <div class="form-group">
                 <label for="formGroupExampleInput">Seleccione una fecha:</label>
-                <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.fecha">          
+                <input type="date" class="form-control myInput" id="formGroupExampleInput" placeholder="Example input" ng-model="vm.nuevoEntierro.fecha">          
               </div>
       
               <div class="form-group">
                 <label for="formGroupExampleInput">Seleccione un lugar:</label>
-                <select id="inputState" class="form-control" ng-model="vm.nuevoEntierro.lugar">
+                <select id="inputState" class="form-control mySelect" ng-model="vm.nuevoEntierro.lugar">
                   <option>Cripta subterránea</option>
                   <option>Patio de los vecinos</option>
                   <option>Cementerio</option>
