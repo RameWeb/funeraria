@@ -20,13 +20,16 @@ gulp.task('connect', () => {
     port: 8000,
     livereload: true
   });
+  browserSync.init({
+    server : './public'
+  })
 });
 
 gulp.task('to-do', () =>{
   gulp.src(paths.js)
   .pipe(todo())
   .pipe(gulp.dest('./'));
-})
+});
 
 // Se crea una tarea que trae todas las dependencias desde los node_modules hasta la carpeta lib dentro de public
 gulp.task('dependencies', () => {
@@ -51,60 +54,15 @@ gulp.task('dependencies', () => {
   .pipe(gulp.dest('./public/lib/'));
 });
 
-// Tarea que recarga todos los html
-gulp.task('html', () => {
-  gulp.src('./public/components/**/*.html')
-  .pipe(connect.reload())
-  .pipe(browserSync.stream());
-})
-
-// Tarea que recarga todos los css
-gulp.task('css', () => {
-  gulp.src('./public/components/**/*.css')
-  .pipe(connect.reload())
-  .pipe(browserSync.stream());
-})
-
-// Tarea que recarga todos los js
-gulp.task('js', () => {
-gulp.src('./public/components/**/*.js')
-  .pipe(connect.reload())
-  .pipe(browserSync.stream());
-})
-
 gulp.task('reload', () =>{
   gulp.src([paths.views, paths.styles, paths.js])
   .pipe(connect.reload())
   .pipe(browserSync.stream());
 });
 
-// Tarea que vigila todos los cambios dentro de los archivos de html, css y js y llama a las tareas de recarga de cada uno
 gulp.task('watch', () => {
-  gulp.watch([
-    './public/*.css',
-    './public/components/*.css',
-    './public/components/**/*.css',
-    './public/components/**/**/*.css'
-  ], ['css']);
-
-  gulp.watch([
-    './public/*.js',
-    './public/components/*.js',
-    './public/components/**/*.js',
-    './public/components/**/**/*.js',
-  ], ['js']);
-
-  gulp.watch([
-    './public/*.html',
-    './public/components/*.html',
-    './public/components/**/*.html',
-    './public/components/**/**/*.html'
-  ], ['html']);
+  gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
+    .on('change', browserSync.reload);
 });
-
 // Tarea global que llama todas las tareas
-gulp.task('default', ['connect', 'to-do', 'dependencies','html','css','js','watch'], () =>{
-  browserSync.init({
-    server:'./public'
-  })
-});
+gulp.task('default', ['connect', 'to-do', 'dependencies','reload','watch']);
