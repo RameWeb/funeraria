@@ -5,7 +5,13 @@
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 const nodemon = require('gulp-nodemon');
+const todo = require('gulp-todo');
 const browserSync = require('browser-sync').create();
+const paths = {
+  views : './public/components/**/**/*.html',
+  styles : './public/components/**/**/*.css',
+  js : './public/components/**/**/*.js'
+}
 
 // Se crea una tarea que conecta el servidor, con la ruta que va a conectar
 gulp.task('connect', () => {
@@ -15,6 +21,12 @@ gulp.task('connect', () => {
     livereload: true
   });
 });
+
+gulp.task('to-do', () =>{
+  gulp.src(paths.js)
+  .pipe(todo())
+  .pipe(gulp.dest('./'));
+})
 
 // Se crea una tarea que trae todas las dependencias desde los node_modules hasta la carpeta lib dentro de public
 gulp.task('dependencies', () => {
@@ -60,6 +72,12 @@ gulp.src('./public/components/**/*.js')
   .pipe(browserSync.stream());
 })
 
+gulp.task('reload', () =>{
+  gulp.src([paths.views, paths.styles, paths.js])
+  .pipe(connect.reload())
+  .pipe(browserSync.stream());
+});
+
 // Tarea que vigila todos los cambios dentro de los archivos de html, css y js y llama a las tareas de recarga de cada uno
 gulp.task('watch', () => {
   gulp.watch([
@@ -85,7 +103,7 @@ gulp.task('watch', () => {
 });
 
 // Tarea global que llama todas las tareas
-gulp.task('default', ['connect','dependencies','html','css','js','watch'], () =>{
+gulp.task('default', ['connect', 'to-do', 'dependencies','html','css','js','watch'], () =>{
   browserSync.init({
     server:'./public'
   })
