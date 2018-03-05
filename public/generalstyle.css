@@ -26,6 +26,10 @@ input.myInput, select.mySelect{
 hr{
   color: #f6f6f6;
 }
+.mylogo{
+  color: #2B2B2B !important;
+  font-weight: 700;
+}
 
 .btnAction{
   background-color: #FFD655;
@@ -33,7 +37,7 @@ hr{
 }
 .pinkNav{
   background-color: #ED5E78;
-  height: 65px;
+  /* height: 65px; */
 }
 a.myNavLinks{
   font-weight: 700;
@@ -74,4 +78,27 @@ a.myNavLinks{
 
 .content{
   font-weight: 300;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 320px) {
+  .jumboContent{
+    font-size: 1rem;
+    max-width: 200px;
+  }
+  .cover{
+    height: 20vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .jumboContent{
+    font-size: 1.5rem;
+    max-width: 300px;
+  }
+  .cover{
+    height: 35vh;
+  }
 }

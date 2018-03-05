@@ -35,7 +35,7 @@
 
       // Tomamos el objeto sin formato y lo comvertimos en un objeto de tipo cliente
       let objNuevoEntierro = new Entierro(vm.nuevoEntierro.horaInicio,vm.nuevoEntierro.horaFinal,vm.nuevoEntierro.fecha,vm.nuevoEntierro.lugar, vm.nuevoEntierro.prioridad);
-      // console.log(objNuevoEntierro);
+      console.log(objNuevoEntierro);
       // localStorage.setItem('nuevoEntierro', JSON.stringify(objNuevoEntierro));
       // console.log(objNuevoEntierro.obtenerHora()); //metodo de horas y minutos
 
