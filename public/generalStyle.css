@@ -15,7 +15,11 @@
   background-color: #FC427B;
   color: #fff;
 }
+<<<<<<< HEAD
 input.myCheckbox[type=checkbox]:checked + label:before{
+=======
+input.myCheckbox[type=checkbox]{
+>>>>>>> origin/Nicole
   background-color: #FC427B !important;
 }
 input.myInput, select.mySelect{
@@ -35,9 +39,21 @@ hr{
   background-color: #FFD655;
   color: #000;
 }
+<<<<<<< HEAD
 .pinkNav{
   background-color: #ED5E78;
   /* height: 65px; */
+=======
+.btn ,.bEntierro{
+  background-color:greenyellow;
+  color: black;
+  
+
+}
+.pinkNav{
+  background-color: #ED5E78;
+  / height: 65px; /
+>>>>>>> origin/Nicole
 }
 a.myNavLinks{
   font-weight: 700;
@@ -82,7 +98,11 @@ a.myNavLinks{
 
 
 
+<<<<<<< HEAD
 /* Media Queries */
+=======
+/ Media Queries /
+>>>>>>> origin/Nicole
 @media (max-width: 320px) {
   .jumboContent{
     font-size: 1rem;
@@ -101,4 +121,30 @@ a.myNavLinks{
   .cover{
     height: 35vh;
   }
+<<<<<<< HEAD
+=======
+}
+
+Animador{
+  background-color: #222222 !important;
+  color: #FC427B !important;
+  border: none !important;
+}
+
+.margin{
+  margin-left: 5%;
+}
+.title{
+  text-align: center;
+  margin-top: 100px;
+  color: aquamarine;
+}
+.icon{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.TheCheckBox{
+  background-color: #FC427B;
+  color: #fff;
+>>>>>>> origin/Nicole
 }

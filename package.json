@@ -35,8 +35,12 @@
 <<<<<<< HEAD
 =======
     "bootstrap-material-design": "^4.1.1",
+<<<<<<< HEAD
     "gulp-todo": "^5.4.0",
 >>>>>>> origin/Camila
+=======
+    "checklist-model": "^0.11.0",
+>>>>>>> origin/Nicole
     "jquery": "^3.3.1",
     "oclazyload": "^1.1.0",
     "popper.js": "^1.12.9",

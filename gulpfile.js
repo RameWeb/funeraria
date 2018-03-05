@@ -67,7 +67,17 @@ gulp.task('dependencies', () => {
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/jquery/dist/jquery.min.js',
+<<<<<<< HEAD
     './node_modules/popper.js/dist/popper.min.js'
+=======
+    './node_modules/popper.js/dist/umd/popper.min.js',
+    './node_modules/sweetalert/dist/sweetalert.min.js',
+    './node_modules/angular/angular.min.js',
+    './node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
+    './node_modules/angular-css/angular-css.min.js',
+    './node_modules/oclazyload/dist/ocLazyLoad.min.js',
+    './node_modules/checklist-model/checklist-model.js'
+>>>>>>> origin/Nicole
   ])
     .pipe(gulp.dest('./public/lib/bootstrap'));
 

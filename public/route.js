@@ -63,10 +63,21 @@
       url: '/',
       // Se convoca al html
       templateUrl: './components/landing-page/landing-page.view.html',
-      // se convoca el css
       css: './components/landing-page/landong-page.style.css'
     })
+    .state('registroFiesta', {
+      url: '/registrarUnaFiesta',
+      templateUrl: './components/fiestaInfierno/fiestaInfierno.vista.html',
+      resolve:{
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/fiestaInfierno/fiestaInfierno.controlador.js')
+        }]
+      },
+      controller:'controladorFiesta',
+      controllerAs:'vm'
+    })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     .state('retoques', {
       // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
@@ -101,6 +112,19 @@
     })
 
     
+=======
+    .state('registroAnimador', {
+      url: '/registrarUnAnimador',
+      templateUrl: './components/Animadores/animadores.vista.html',
+      resolve:{
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/Animadores/animadores.controlador.js')
+        }]
+      },
+      controller:'controladorAnimadores',
+      controllerAs:'vm'
+    })
+>>>>>>> origin/Nicole
 
 >>>>>>> origin/Jason
 
