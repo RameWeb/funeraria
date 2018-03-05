@@ -24,7 +24,7 @@
       css: './components/landing-page/landong-page.style.css'
     })
     .state('registroFiesta', {
-      url: '/registrarUnaFiesta',
+      url: '/registroFiesta',
       templateUrl: './components/fiestaInfierno/fiestaInfierno.vista.html',
       resolve:{
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
