@@ -28,6 +28,11 @@
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
     "bootstrap": "^4.0.0",
+<<<<<<< HEAD
+=======
+    "bootstrap-material-design": "^4.1.1",
+    "gulp-todo": "^5.4.0",
+>>>>>>> origin/Camila
     "jquery": "^3.3.1",
     "oclazyload": "^1.1.0",
     "popper.js": "^1.12.9",

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "editor.wordWrap": "on",
     "explorer.confirmDelete": true,
     "workbench.iconTheme": "material-icon-theme",
@@ -11,4 +12,7 @@
     },
     "workbench.colorTheme": "Sublime Material Theme - Dark",
     "editor.tabSize": 2
+=======
+  "window.zoomLevel": -1
+>>>>>>> origin/Camila
 }

@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 const gulp = require('gulp'),
       connect = require('gulp-connect'),
       nodemon = require('gulp-nodemon'),
@@ -10,6 +11,19 @@ const gulp = require('gulp'),
         styles : './public/components/**/**/*.css',
         js: './public/components/**/**/*.js'
       };
+=======
+// Se inyectan las dependenciasdentro del archivo
+const gulp = require('gulp');
+const connect = require('gulp-connect');
+const nodemon = require('gulp-nodemon');
+const todo = require('gulp-todo');
+const browserSync = require('browser-sync').create();
+const paths = {
+  views : './public/components/**/**/*.html',
+  styles : './public/components/**/**/*.css',
+  js : './public/components/**/**/*.js'
+}
+>>>>>>> origin/Camila
 
 gulp.task('connect', () => {
   connect.server({
@@ -18,11 +32,19 @@ gulp.task('connect', () => {
     livereload: true
   });
   browserSync.init({
+<<<<<<< HEAD
     server: './public'
   })
 });
 
 gulp.task('to-do', () => {
+=======
+    server : './public'
+  })
+});
+
+gulp.task('to-do', () =>{
+>>>>>>> origin/Camila
   gulp.src(paths.js)
   .pipe(todo())
   .pipe(gulp.dest('./'));
@@ -49,6 +71,7 @@ gulp.task('dependencies', () => {
   ])
     .pipe(gulp.dest('./public/lib/bootstrap'));
 
+<<<<<<< HEAD
   gulp.src([
     './node_modules/sweetalert/dist/sweetalert.min.js',
   ])
@@ -60,11 +83,22 @@ gulp.task('reload', () => {
   gulp.src([paths.views, paths.styles, paths.js])
     .pipe(connect.reload())
     .pipe(browserSync.stream());
+=======
+gulp.task('reload', () =>{
+  gulp.src([paths.views, paths.styles, paths.js])
+  .pipe(connect.reload())
+  .pipe(browserSync.stream());
+>>>>>>> origin/Camila
 });
 
 gulp.task('watch', () => {
   gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
     .on('change', browserSync.reload);
 });
+<<<<<<< HEAD
 
 gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'watch']);
+=======
+// Tarea global que llama todas las tareas
+gulp.task('default', ['connect', 'to-do', 'dependencies','reload','watch']);
+>>>>>>> origin/Camila

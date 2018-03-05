@@ -8,6 +8,7 @@
   function routing($stateProvider, $urlRouterProvider, $oclazyLoad) {
 
     $stateProvider
+<<<<<<< HEAD
       .state('landingPage', {
         url: '/',
         templateUrl: './components/landingPage/landingPage.view.html',
@@ -54,4 +55,36 @@
 
     $urlRouterProvider.otherwise('/users');
   };
+=======
+
+    // se configran todos los estados (vistas) por medio del atrubuto .state que es una funcion dentro del stateProvider
+    .state('landing', {
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/',
+      // Se convoca al html
+      templateUrl: './components/landing-page/landing-page.view.html',
+      // se convoca el css
+      css: './components/landing-page/landong-page.style.css'
+    })
+
+    .state('retoques', {
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/retoques',
+      // Se convoca al html
+      templateUrl: './components/retoques/retoques.vista.html',
+      // se convoca el css
+      css: './components/retoques/retoques.estilo.css',
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/retoques/retoques.contolador.js')
+        }]
+      },
+      controller: 'controladorRetoques',
+      controllerAs: 'vm'
+    })
+
+    $urlRouterProvider.otherwise('/');
+  }
+
+>>>>>>> origin/Camila
 })();
