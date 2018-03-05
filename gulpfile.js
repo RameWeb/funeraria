@@ -3,7 +3,6 @@
 const gulp = require('gulp'),
       connect = require('gulp-connect'),
       nodemon = require('gulp-nodemon'),
-      todo = require('gulp-todo'),
       browserSync = require('browser-sync'),
       paths = {
         views : './public/components/**/**/*.html',
@@ -22,11 +21,7 @@ gulp.task('connect', () => {
   })
 });
 
-gulp.task('to-do', () => {
-  gulp.src(paths.js)
-  .pipe(todo())
-  .pipe(gulp.dest('./'));
-});
+
 
 gulp.task('dependencies', () => {
   gulp.src([
