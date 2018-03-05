@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "arquitectura",
+=======
+  "name": "laboratorio-funeraria",
+>>>>>>> master
   "version": "1.0.0",
   "description": "Arquitectura de proyecto",
   "main": "./public/app.js",
