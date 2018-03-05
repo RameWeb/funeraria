@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "editor.wordWrap": "on",
     "explorer.confirmDelete": true,
     "workbench.iconTheme": "material-icon-theme",
@@ -19,6 +20,8 @@
 =======
   "window.zoomLevel": -1
 =======
+=======
+>>>>>>> origin/Jason
     "editor.tabSize": 2,
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
@@ -38,6 +41,9 @@
         "app.js": "angular"
     },
     "vsicons.presets.angular": false
+<<<<<<< HEAD
 >>>>>>> master
 >>>>>>> origin/Camila
+=======
+>>>>>>> origin/Jason
 }

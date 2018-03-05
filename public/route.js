@@ -67,6 +67,7 @@
       css: './components/landing-page/landong-page.style.css'
     })
 
+<<<<<<< HEAD
     .state('retoques', {
       // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
       url: '/retoques',
@@ -82,6 +83,26 @@
       controller: 'controladorRetoques',
       controllerAs: 'vm'
     })
+=======
+    .state('entierros', {
+      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+      url: '/entierros',
+      // Se convoca al html
+      templateUrl: './components/entierros/entierros.vista.html',
+      // se convoca el css
+      css: './components/entierros/entierros.estilo.css',
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/entierros/entierros.controlador.js')
+        }]
+      },
+      controller: 'controladorEntierros',
+      controllerAs: 'vm'
+    })
+
+    
+
+>>>>>>> origin/Jason
 
     $urlRouterProvider.otherwise('/');
   }
