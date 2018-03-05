@@ -1,10 +1,18 @@
 // TODO Dentro de este archivo se crean los objetos con sus respectivos métodos
 class Cliente{
-  constructor(pCedula, pNombre1, pApellido1, pEdad){
+  constructor(pFoto,pCedula,pNombre,pApellido,pFechanacimiento,pSexo,pUbicacion,pProvincia,pCanton,pDistrito,pUsuario,pContrasenna){
+    this.foto = pFoto;
     this.cedula = pCedula;
-    this.nombre1 = pNombre1;
-    this.apellido1 = pApellido1;
-    this.edad = pEdad;
+    this.nombre = pNombre;
+    this.apellido = pApellido;
+    this.fechanacimiento = pFechanacimiento;
+    this.sexo = pSexo;
+    this.ubicacion = pUbicacion;
+    this.provincia = pProvincia;
+    this.canton = pCanton;
+    this.distrito = pDistrito;
+    this.usuario = pUsuario;
+    this.contrasenna = pContrasenna;
     this.difuntos = [];
   }
 

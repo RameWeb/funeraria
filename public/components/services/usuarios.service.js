@@ -34,7 +34,7 @@
       }else{
         listaUsuariosLocal.forEach(obj => {
           
-          let objUsuarios = new Cliente(obj.cedula, obj.nombre1, obj.apellido1, obj.edad);
+          let objUsuarios = new Cliente(obj.foto, obj.cedula, obj.nombre, obj.apellido, obj.fechanacimiento,obj.sexo, obj.ubicacion, obj.provincia, obj.canton, obj.distrito, obj.usuario, obj.contrasenna);
 
           obj.difuntos.forEach(objDifuntos => {
             let objTempDifuntos = new Difuntos(objDifuntos.apodo, objDifuntos.edad, objDifuntos.sexo, objDifuntos.tamanno, objDifuntos.idlapida);

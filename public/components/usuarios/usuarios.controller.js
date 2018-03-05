@@ -19,7 +19,7 @@
       console.log(pnuevoUsuario);
 
       // Tomamos el objeto sin formato y lo comvertimos en una instancia de la clase cliente
-      let objNuevoUsuario = new Cliente(pnuevoUsuario.cedula, pnuevoUsuario.nombre1, pnuevoUsuario.apellido1, pnuevoUsuario.edad);
+      let objNuevoUsuario = new Cliente(pnuevoUsuario.foto,pnuevoUsuario.cedula,pnuevoUsuario.nombre,pnuevoUsuario.apellido,pnuevoUsuario.fechanacimiento,pnuevoUsuario.sexo,pnuevoUsuario.ubicacion,pnuevoUsuario.provincia,pnuevoUsuario.canton,pnuevoUsuario.distrito,pnuevoUsuario.usuario,pnuevoUsuario.contrasenna);
 
      
       console.log('objeto con usuario');

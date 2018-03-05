@@ -16,7 +16,7 @@
 
     let objSinFormatoUsuario = JSON.parse($stateParams.objUsuarioTemp);
 
-    let objUsuario = new Cliente(objSinFormatoUsuario.cedula, objSinFormatoUsuario.nombre1, objSinFormatoUsuario.apellido1, objSinFormatoUsuario.edad);
+    let objUsuario = new Cliente(objSinFormatoUsuario.foto, objSinFormatoUsuario.cedula, objSinFormatoUsuario.nombre, objSinFormatoUsuario.apellido, objSinFormatoUsuario.apellido,objSinFormatoUsuario.fechanacimiento, objSinFormatoUsuario.sexo, objSinFormatoUsuario.ubicacion, objSinFormatoUsuario.provincia, objSinFormatoUsuario.canton, objSinFormatoUsuario.distrito, objSinFormatoUsuario.usuario, objSinFormatoUsuario.contrasenna);
 
     vm.nuevoDifuntos = {};
 
