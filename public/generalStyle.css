@@ -114,9 +114,7 @@ Animador{
   color: #FC427B !important;
   border: none !important;
 }
-.CheckAnimador{
-  background-color: green;
-}
+
 .margin{
   margin-left: 5%;
 }
@@ -128,4 +126,8 @@ Animador{
 .icon{
   margin-top: 80px;
   margin-bottom: 80px;
+}
+.TheCheckBox{
+  background-color: #FC427B;
+  color: #fff;
 }
