@@ -35,14 +35,19 @@
   </nav>
 </header>
 
-<h1>Agendar una nueva fiesta</h1>
-<div class="col-md-7 d-flex align-items-center justify-content-center">
-  <img src="../../icons/042-maracas.svg" alt="" class="img-fluid" height="500px" width="500px">
-</div>
 
-<div class="gray">
-  <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
-    <div class="form-action">
+
+<div class="row">
+  <div class="col-md-5">
+    <div>
+      <h2 class="headlines title">Agregar un nuevo animador</h2>
+    </div>
+    <div class="my-4 margin">
+     <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
+      <div class="">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
       <label for="">Fecha de la Fiesta</label>
       <input type="date"id="fecha" ng-model="vm.nuevaFiesta.fecha"  required>
     </div>
