@@ -18,6 +18,14 @@
 input.myCheckbox[type=checkbox]{
   background-color: #FC427B !important;
 }
+.RadioCheck{
+
+  color: greenyellow;
+}
+.box{
+  margin-top: 0px;
+  
+}
 input.myInput, select.mySelect{
   background-color: #222222 !important;
   color: #FC427B !important;
@@ -37,10 +45,12 @@ hr{
 }
 .btn ,.bEntierro{
   background-color:greenyellow;
-  color: black;
-  
-
+  color: black;  
 }
+.bEntierro:hover{
+  background-color: #FC427B;
+}
+
 .pinkNav{
   background-color: #ED5E78;
   / height: 65px; /
@@ -119,9 +129,14 @@ Animador{
   margin-left: 5%;
 }
 .title{
-  text-align: center;
+ 
   margin-top: 100px;
   color: aquamarine;
+}
+.title1{
+  text-align: center;
+  color: greenyellow;
+  
 }
 .icon{
   margin-top: 80px;
@@ -131,3 +146,10 @@ Animador{
   background-color: #FC427B;
   color: #fff;
 }
+.modal-content{
+  color: #222222;
+}
+.modal-title{
+  color: #FC427B;
+}
+

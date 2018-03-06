@@ -36,56 +36,49 @@
 </header>
 
 
-
-<div class="row">
-  <div class="col-md-5">
-    <div>
-      <h2 class="headlines title">Agregar una nueva fiesta</h2>
-    </div>
-    <div class="my-4 margin">
-     <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
-      <div class="">
-        <div class="row">
-          <div class="col">
-            <div class="form-group">
-      <label for="">Fecha de la Fiesta</label>
-      <input type="date"id="fecha" class="myInput" ng-model="vm.nuevaFiesta.fecha"  required>
-    </div>
-  </div>
-  <div class="col">
-    <div class="form-group">
-   
-        <label for="">Cantidad de horas</label>
-        <input type="number" class="myInput" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
-      </div>
-    </div>
-      <div class="form-action">
-        
-          
-        <div class="form-group">
-
-          <label ng-repeat="animador in vm.listaAnimadores">
-            
-
-            <input type="checkbox" class="TheCheckBox" data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
-            
-          </label>
-
-        </div>
-        <div class="form-action">
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div><h2 class="headlines title">Agregar una nueva fiesta</h2></div>
+      <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
+          <div class="form-group">
             <label for="">Seleccione su metodo de pago</label><br>
-
-          <label for="">Efectivo</label>
-          <input type="radio" name="metodoPago" value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
-          <label for="">Tarjeta</label>
-          <input type="radio" name="metodoPago" value="Tarjeta" ng-model="vm.nuevaFiesta.pago" required> 
-          
+            <label for="">Efectivo</label>
+            <input type="radio" name="metodoPago" class=""value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
+            <label for="">Tarjeta</label>
+            <input type="radio" name="metodoPago"class="" value="Tarjeta" ng-model="vm.nuevaFiesta.pago" required> 
          </div>
-        <button type="submit" class="btn bEntierro" id="btnGuardar">Guardar</button>
-  </form>
+         <div class="form-group">
+            <label for="">Fecha de la Fiesta</label>
+            <input type="date"id="fecha" class="myInput" ng-model="vm.nuevaFiesta.fecha"  required>
+         </div>
+         <div class="form-group">
+            <label for="">Cantidad de horas</label>
+            <input type="number" class="myInput" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
+         </div>
+         <div class="form-group col-md-12">
+          <label for="">Seleccione uno o varios animadores</label>
+          <div>
+            <label ng-repeat="animador in vm.listaAnimadores" class="col-11">
+              <input type="checkbox" class="col-1" data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
+            </label>
+          </div>
+          
+          <button type="submit" class="btn bEntierro " id="btnGuardar">Guardar</button>
+        </div>
 
+      </form>
 </div>
-<div class="col-9">
+<div class="col-md-6 d-flex align-items-center justify-content-center">
+    
+    <img src="../../icons/042-maracas.svg" alt="" class="img-fluid" height="400px" width="400px">
+  </div>
+</div>   
+</div>
+
+    
+   
+<div class="col-11 mt-5">
   <table class="table">
     <thead>
         <tr>
@@ -110,7 +103,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Animadores seleccionados para la fiesta</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -132,8 +125,8 @@
                   </table>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <button type="button" class="btn btn-secondary bEntierro" data-dismiss="modal">Close</button>
+                  
                 </div>
               </div>
             </div>
