@@ -1,0 +1,66 @@
+
+<div class="container">   
+    <div class="row db-padding-top db-attached">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="../.././icons/047-catrina.svg" width="100%" height="100%" alt="">
+        </div>
+
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <h2 class="headlines">Retoques</h2>
+        </div>
+    </div>
+
+  <div class="row db-padding-btm db-attached">
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+        <div class="db-wrapper">
+            <div class="db-pricing-eleven db-bk-color-one">
+                <div class="price">
+                    <p>$150</p>
+                </div>
+                <div class="type">
+                    <p>Sesión de Maquillaje</p>
+                </div>
+
+                <button ng-click="vm.add('Maquillaje' , 150)" ng-show="vm.btnAgregarMaquillaje == true" class="btn btn-light">Agregar</button> 
+                <button ng-click="vm.remove('Maquillaje')" ng-show="vm.btnAgregarMaquillaje == false"  class="btn btn-light">Eliminar</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
+        <div class="db-wrapper">
+            <div class="db-pricing-eleven db-bk-color-two popular">
+                <div class="price">
+                    <p>$100</p>
+                </div>
+            <div class="type">
+                <p>Sesión de Peluquería</p>
+            </div>
+            <div>
+
+            <button ng-click="vm.add('Peluquería' , 100)" ng-show="vm.btnAgregarPeluqueria == true" class="btn btn-light">Agregar</button> 
+            <button ng-click="vm.remove('Peluquería')" ng-show="vm.btnAgregarPeluqueria == false" class="btn btn-light">Eliminar</button>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4 ">
+        <div class="db-wrapper">
+            <div class="db-pricing-eleven db-bk-color-three">
+                <div class="price">
+                    <p>$250</p>
+                </div>
+                <div class="type">
+                    <p>Sesión de Costura</p>
+                </div>
+
+            <button ng-click="vm.add('Costura' , 250)" ng-show="vm.btnAgregarCostura == true" class="btn btn-light">Agregar</button> 
+            <button ng-click="vm.remove('Costura')" ng-show="vm.btnAgregarCostura == false" class="btn btn-light">Eliminar</button>
+
+            </div>
+        </div>
+    </div>  
+    </div>
+
+</div>
