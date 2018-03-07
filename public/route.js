@@ -8,63 +8,49 @@
   function routing($stateProvider, $urlRouterProvider, $oclazyLoad) {
 
     $stateProvider
-<<<<<<< HEAD
-      .state('landingPage', {
-        url: '/',
-        templateUrl: './components/landingPage/landingPage.view.html',
-        data:{
-          pageTitle: 'Inicio | Funeraria el vals de los muertos'
-        }
-      })
 
-      .state('usuarios', {
-        url: '/users',
-        templateUrl: './components/usuarios/usuarios.view.html',
-        data:{
-          pageTitle: 'Registro usuarios | Ejemplo Arquitectura'
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/usuarios/usuarios.controller.js')
-          }]
-        },
-        controller: 'controladorUsuarios',
-        controllerAs: 'vm'
-      })
-
-      .state('difuntos', {
-        url: '/difuntos',
-        templateUrl: './components/difuntos/difuntos.vista.html',
-        data:{
-          pageTitle: 'Mantenimiento de Difuntos | Funeraria'
-        },
-        params: {
-          objUsuarioTemp: ''
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/difuntos/difuntos.controlador.js')
-          }]
-        },
-        css: './components/difuntos/difuntos.estilos.css',
-        controller: 'controladorDifuntos',
-        controllerAs: 'vm'
-      })
-
-      
-
-    $urlRouterProvider.otherwise('/users');
-  };
-=======
-
-    // se configran todos los estados (vistas) por medio del atrubuto .state que es una funcion dentro del stateProvider
-    .state('landing', {
-      // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
+    .state('landingPage', {
       url: '/',
-      // Se convoca al html
-      templateUrl: './components/landing-page/landing-page.view.html',
-      css: './components/landing-page/landong-page.style.css'
+      templateUrl: './components/landingPage/landingPage.view.html',
+      data:{
+        pageTitle: 'Inicio | Funeraria el vals de los muertos'
+      }
     })
+
+    .state('usuarios', {
+      url: '/users',
+      templateUrl: './components/usuarios/usuarios.view.html',
+      data:{
+        pageTitle: 'Registro usuarios | Ejemplo Arquitectura'
+      },
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/usuarios/usuarios.controller.js')
+        }]
+      },
+      controller: 'controladorUsuarios',
+      controllerAs: 'vm'
+    })
+
+    .state('difuntos', {
+      url: '/difuntos',
+      templateUrl: './components/difuntos/difuntos.vista.html',
+      data:{
+        pageTitle: 'Mantenimiento de Difuntos | Funeraria'
+      },
+      params: {
+        objUsuarioTemp: ''
+      },
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/difuntos/difuntos.controlador.js')
+        }]
+      },
+      css: './components/difuntos/difuntos.estilos.css',
+      controller: 'controladorDifuntos',
+      controllerAs: 'vm'
+    }) 
+
     .state('registroFiesta', {
       url: '/registrarUnaFiesta',
       templateUrl: './components/fiestaInfierno/fiestaInfierno.vista.html',
@@ -77,8 +63,18 @@
       controllerAs:'vm'
     })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+    .state('registroAnimador', {
+      url: '/registrarUnAnimador',
+      templateUrl: './components/Animadores/animadores.vista.html',
+      resolve:{
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/Animadores/animadores.controlador.js')
+        }]
+      },
+      controller:'controladorAnimadores',
+      controllerAs:'vm'
+    })
+
     .state('retoques', {
       // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
       url: '/retoques',
@@ -94,7 +90,7 @@
       controller: 'controladorRetoques',
       controllerAs: 'vm'
     })
-=======
+
     .state('entierros', {
       // Se le crea un url (por el cual se va a accesar a el medio de la ruta en el navegador)
       url: '/entierros',
@@ -111,25 +107,6 @@
       controllerAs: 'vm'
     })
 
-    
-=======
-    .state('registroAnimador', {
-      url: '/registrarUnAnimador',
-      templateUrl: './components/Animadores/animadores.vista.html',
-      resolve:{
-        load: ['$ocLazyLoad', ($ocLazyLoad) => {
-          return $ocLazyLoad.load('./components/Animadores/animadores.controlador.js')
-        }]
-      },
-      controller:'controladorAnimadores',
-      controllerAs:'vm'
-    })
->>>>>>> origin/Nicole
-
->>>>>>> origin/Jason
-
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/users');
   }
-
->>>>>>> origin/Camila
 })();
