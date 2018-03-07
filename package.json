@@ -20,7 +20,7 @@
   "author": { 
     "name" : "Rame"
   },
-  "license": "ISC"  
+  "license": "ISC"
   },
   "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
   "devDependencies": {
@@ -41,4 +41,3 @@
     "ui-router-page-title": "^1.0.4"
   }
 }
-
