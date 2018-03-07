@@ -1,17 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-const gulp = require('gulp'),
-      connect = require('gulp-connect'),
-      nodemon = require('gulp-nodemon'),
-      todo = require('gulp-todo'),
-      browserSync = require('browser-sync'),
-      paths = {
-        views : './public/components/**/**/*.html',
-        styles : './public/components/**/**/*.css',
-        js: './public/components/**/**/*.js'
-      };
-=======
 // Se inyectan las dependenciasdentro del archivo
 const gulp = require('gulp');
 const connect = require('gulp-connect');
@@ -23,7 +11,6 @@ const paths = {
   styles : './public/components/**/**/*.css',
   js : './public/components/**/**/*.js'
 }
->>>>>>> Dev
 
 gulp.task('connect', () => {
   connect.server({
