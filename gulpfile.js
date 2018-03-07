@@ -46,9 +46,6 @@ gulp.task('dependencies', () => {
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/jquery/dist/jquery.min.js',
-<<<<<<< HEAD
-    './node_modules/popper.js/dist/popper.min.js'
-=======
     './node_modules/popper.js/dist/umd/popper.min.js',
     './node_modules/sweetalert/dist/sweetalert.min.js',
     './node_modules/angular/angular.min.js',
@@ -56,7 +53,6 @@ gulp.task('dependencies', () => {
     './node_modules/angular-css/angular-css.min.js',
     './node_modules/oclazyload/dist/ocLazyLoad.min.js',
     './node_modules/checklist-model/checklist-model.js'
->>>>>>> Dev
   ])
     .pipe(gulp.dest('./public/lib/bootstrap'));
 
@@ -77,10 +73,5 @@ gulp.task('watch', () => {
   gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
     .on('change', browserSync.reload);
 });
-<<<<<<< HEAD
-
-gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'watch']);
-=======
 // Tarea global que llama todas las tareas
 gulp.task('default', ['connect', 'to-do', 'dependencies','reload','watch']);
->>>>>>> Dev
