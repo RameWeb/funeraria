@@ -9,7 +9,7 @@
 
     $stateProvider
 
-    .state('landingPage', {
+    .state('landing-page', {
       url: '/',
       templateUrl: './components/landing-page/landing-page.view.html',
       data:{
@@ -107,6 +107,6 @@
       controllerAs: 'vm'
     })
 
-    $urlRouterProvider.otherwise('/users');
+    $urlRouterProvider.otherwise('/');
   }
 })();
