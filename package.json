@@ -30,9 +30,13 @@
     "email": "kaguilara@ucenfotec.ac.cr",
     "url": "https://twitter.com/kaguilara_"
   },
+<<<<<<< HEAD
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1/issues"
+=======
+  "license": "ISC"  
+>>>>>>> parent of 5058624... .JSON
   },
   "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
 =======
@@ -62,3 +66,7 @@
     "ui-router-page-title": "^1.0.4"
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 5058624... .JSON
