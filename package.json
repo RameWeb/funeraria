@@ -1,3 +1,4 @@
+
 {
   "name": "labFuneraria",
   "version": "1.0.0",
@@ -14,25 +15,9 @@
     "NODEJS"
   ],
   "author": {
-<<<<<<< HEAD
-    "name": "Kevin Aguilar",
-    "email": "kaguilara@ucenfotec.ac.cr",
-    "url": "https://twitter.com/kaguilara_"
-  },
-<<<<<<< HEAD
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1/issues"
-=======
-  "license": "ISC"  
->>>>>>> parent of 5058624... .JSON
-  },
-  "homepage": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1#readme",
-=======
     "name": "Rame"
   },
   "license": "ISC",
->>>>>>> Dev
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
@@ -44,10 +29,7 @@
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
     "bootstrap": "^4.0.0",
-<<<<<<< HEAD
-=======
     "checklist-model": "^0.11.0",
->>>>>>> Dev
     "jquery": "^3.3.1",
     "oclazyload": "^1.1.0",
     "popper.js": "^1.12.9",
@@ -55,7 +37,3 @@
     "ui-router-page-title": "^1.0.4"
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 5058624... .JSON
