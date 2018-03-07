@@ -11,7 +11,7 @@
 
     .state('landingPage', {
       url: '/',
-      templateUrl: './components/landingPage/landingPage.view.html',
+      templateUrl: './components/landing-page/landing-page.view.html',
       data:{
         pageTitle: 'Inicio | Funeraria el vals de los muertos'
       }
