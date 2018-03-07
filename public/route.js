@@ -16,61 +16,6 @@
         }
       })
 
-<<<<<<< HEAD
-      .state('usuarios', {
-        url: '/users',
-        templateUrl: './components/usuarios/usuarios.view.html',
-        data:{
-          pageTitle: 'Registro usuarios | Ejemplo Arquitectura'
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/usuarios/usuarios.controller.js')
-          }]
-        },
-        controller: 'controladorUsuarios',
-        controllerAs: 'vm'
-      })
-
-      .state('difuntos', {
-        url: '/difuntos',
-        templateUrl: './components/difuntos/difunto.view.html',
-        data:{
-          pageTitle: 'Registro difuntos | Ejemplo Arquitectura'
-        },
-        params: {
-          objUsuarioTemp: ''
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/difuntos/difunto.controller.js')
-          }]
-        },
-        controller: 'controladorDifunto',
-        controllerAs: 'vm'
-      })
-
-      .state('reparaciones', {
-        url: '/works',
-        templateUrl: 'components/reparaciones/reparaciones.view.html',
-        data:{
-          pageTitle: 'Registro reparaciones | Ejemplo Arquitectura'
-        },
-        params: {
-          objDifuntoTemp: ''
-        },
-        resolve: {
-          load: ['$ocLazyLoad', ($ocLazyLoad) => {
-            return $ocLazyLoad.load('./components/reparaciones/reparaciones.controller.js')
-          }]
-        },
-        controller: 'controladorReparaciones',
-        controllerAs: 'vm'
-      });
-
-    $urlRouterProvider.otherwise('/users');
-  };
-=======
     .state('landing-page', {
       url: '/',
       templateUrl: './components/landing-page/landing-page.view.html',
@@ -171,5 +116,4 @@
 
     $urlRouterProvider.otherwise('/');
   }
->>>>>>> Dev
 })();
