@@ -35,11 +35,15 @@ class Cliente{
 }
 
 class Difunto{
-  constructor(pmodelo, pmatricula, pmarca){
-    this.modelo = pmodelo;
-    this.matricula = pmatricula;
-    this.marca = pmarca;
-    this.reparaciones = [];
+  constructor(papodo, pedad, psexo, ptamanno, pidlapida){
+    this.apodo = papodo;
+    this.edad = pedad;
+    this.sexo = psexo;
+    this.tamanno = ptamanno;
+    this.idlapida = pidlapida; 
+    this.entierros = [];
+    this.retoque = [];
+    this.fiesta = [];
   }
 
   agregarReparaciones(pnuevaReparacion){
@@ -50,12 +54,12 @@ class Difunto{
     return this.reparaciones;
   }
 
-  getmatricula(){
-    return this.matricula;
+  getidlapida(){
+    return this.idlapida;
   }
 
   getInfoDifunto(){
-    return `${this.marca} ${this.modelo}`;
+    return `${this.idlapida} ${this.apodo}`;
   }
 }
 

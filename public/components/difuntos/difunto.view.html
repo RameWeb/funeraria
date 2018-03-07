@@ -5,18 +5,31 @@
     <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
 
       <div class="form-group">
-        <label for="">Modelo del Difunto</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.modelo">
+        <label for="">Apodo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifuntos.apodo" required>
       </div>
 
       <div class="form-group">
-        <label for="">Matricula</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.matricula">
+        <label for="">Edad</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.edad" required>
+      </div>
+
+      <div >
+        <label for="">Sexo</label>
+        <select class="custom-select" ng-model="vm.nuevoDifuntos.sexo" required>
+        <option>Femenino</option>
+        <option>Masculino</option>      
+        </select>
       </div>
 
       <div class="form-group">
-        <label for="">Marca del Difunto</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.marca">
+        <label for="">TamaÃ±o</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.tamanno" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">N. LÃ¡pida</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.idlapida" required>
       </div>
 
       <button type="submit" class="btn btn-success">Registrar</button>

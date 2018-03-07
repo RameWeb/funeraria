@@ -14,8 +14,6 @@
       $state.go('usuarios');
     }
 
-
-
     let objSinFormatoUsuario = JSON.parse($stateParams.objUsuarioTemp);
 
     let objUsuario = new Cliente(objSinFormatoUsuario.foto,objSinFormatoUsuario.cedula,objSinFormatoUsuario.nombre,objSinFormatoUsuario.apellido,objSinFormatoUsuario.fechanacimiento,objSinFormatoUsuario.sexo,objSinFormatoUsuario.ubicacion,objSinFormatoUsuario.provincia,objSinFormatoUsuario.canton,objSinFormatoUsuario.distrito,objSinFormatoUsuario.usuario,objSinFormatoUsuario.contrasenna);
@@ -30,7 +28,7 @@
 
     vm.registrarDifunto = (pnuevodifunto) => {
 
-      let objDifuntoNuevo = new Difunto(pnuevodifunto.modelo, pnuevodifunto.matricula, pnuevodifunto.marca);
+      let objDifuntoNuevo = new Difunto(pnuevodifuntos.apodo, pnuevodifuntos.edad, pnuevodifuntos.sexo, pnuevodifuntos.tamanno, pnuevodifuntos.idlapida);
 
       servicioUsuarios.addDifunto(objDifuntoNuevo, objUsuario);
 
