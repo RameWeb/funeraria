@@ -8,13 +8,6 @@
   function routing($stateProvider, $urlRouterProvider, $oclazyLoad) {
 
     $stateProvider
-      .state('landing-page', {
-        url: '/',
-        templateUrl: './components/landingPage/landing-page.view.html',
-        data:{
-          pageTitle: 'Inicio | Ejemplo Arquitectura'
-        }
-      })
 
     .state('landing-page', {
       url: '/',
