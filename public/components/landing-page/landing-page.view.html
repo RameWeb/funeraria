@@ -1,47 +1,197 @@
 <!-- dark -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-
-    <a class="navbar-brand" href="#">Funeraria</a>
-
+  <nav class="navbar navbar-expand-lg navbar-dark pinkNav">
+    <a class="navbar-brand mylogo" href="#">El Vals de los Muertos</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPrincipal" aria-controls="navPrincipal"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navPrincipal">
-      <ul class="navbar-nav mr-auto justify-content-end">
-
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Inicio
+      <ul class="navbar-nav mr-auto justify-content-end pinkNav">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#!/entierros">Entierros
             <span class="sr-only">(current)</span>
           </a>
+        </li> -->
+        <li class="nav-item active">
+          <a class="nav-link myNavLinks" href="/#!/nosotros">NOSOTROS</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropVehiculos" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Usuarios
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropVehiculos">
-            <a class="dropdown-item" href="#!/users">Registrar usuarios</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Lista de usuarios</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/servicios">SERVICIOS</a>
         </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropVehiculos" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Vehiculos
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropVehiculos">
-            <a class="dropdown-item" href="#">Lista vehiculos</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Registrar vehiculos</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/testimonios">TESTIMONIOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/contacto">CONTACTO</a>
         </li>
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn my-2 my-sm-0 btnAction" type="button">Iniciar Sesión</button>
+      </form>
     </div>
   </nav>
 </header>
+
+<body class="gray">
+  <!-- hero -->
+  <div class="jumbotron-fluid cover d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <h1 class="headlines jumboContent">Los muertos no vuelven…Se van de fiesta por siempre!</h1>
+          <button class="btn btn-lg btnAction my-2 my-sm-0" type="button">Registrarse</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <section class="container">
+    <div class="row">
+      <section id="nosotros">
+        <div class="row">
+          <div class="col-6 d-flex align-items-center">
+            <div class="titular">
+              <h2>Nosotros</h2>
+              <p>Con más de 10 años de experiencia, Funeraria El vals de los muertos es la empresa fúnebre que tanto ha estado buscando para ocultar sus cuerpos del delito. Contamos con un equipo humano altamente calificado y capacitado para realizar este tipo de hazañas. ¡No lo piense más y deje que nosotros le resolvamos ese pequeño problema!</p>
+            </div>
+          </div>
+          <div class="col-6 imgLogo">
+            <img src="../../icons/logo.png" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios">
+        <h2 class="headlines mb-5 text-center">Servicios</h2>
+        <div class="row">
+          <div class="col-md-3 col-xs-3">
+            <div class="card gray">
+              <div class="ourServices text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/038-skull-2.svg" alt="difuntos" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Difuntos</h5>
+                <p class="card-text content">Matar puede convertirse en pasatiempo, pero vamos, hay que ser organizado. Agregue cuantos difuntos quiera a nuestra lista.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-xs-3">
+            <div class="card gray">
+              <div class="ourServices text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/021-tombstones.svg" alt="entierros" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Entierros</h5>
+                <p class="card-text content">¿Cometió un asesinato y no sabe cómo deshacerse del cuerpo? ¡Nosotros lo convertiremos en abono! Fácil y rápido.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-xs-3">
+            <div class="card gray">
+              <div class="ourServices text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/047-catrina.svg" alt="retoques" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Retoques</h5>
+                <p class="card-text content">Tal vez le haya costado matarlo, pero con un poco de delicadeza, lo dejaremos como si estuviera vivo, pero dormido...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-xs-3">
+            <div class="card gray">
+              <div class="ourServices text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/042-maracas.svg" alt="fiestas" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Fiestas</h5>
+                <p class="card-text content">Morirse es lo de menos...en la otra dimensión llegará a tiempo para pegarse el fiestón. ¡Nosotros se lo organizamos!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <hr>
+
+      <section id="testimonios">
+        <h2 class="headlines mb-5 text-center">Testimonios</h2>
+        <div class="row">
+          <div class="col-md-4 col-xs-4">
+            <div class="card gray">
+              <div class="ourTestimonies text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/003-jigsaw.svg" alt="Jigsaw" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Jigsaw</h5>
+                <p class="card-text content">Puse varias personas a competir por sobrevivencia. Me dejaron un desastre en el cuarto y El Vals de los Muertos se encargó de limpiar todo, sin dejar rastro. ¡Muy efectivos!</p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <div class="card gray">
+              <div class="ourTestimonies text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/002-jason.svg" alt="jason" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Jason V13</h5>
+                <p class="card-text content">Cuando no voy a la U los viernes, me gusta ir a buscar parejas al lago Crystal. Lo bueno es que El Vals de los Muertos se encarga de los cuerpos luego, mientras en casa ceno palomitas.</p>
+              </div>
+            </div> 
+          </div>
+          <div class="col-md-4 col-xs-4">
+            <div class="card gray">
+              <div class="ourTestimonies text-center d-flex align-items-center">
+                <img class="card-img-top mx-auto" src="../../icons/001-it.svg" alt="ItClown" height="80px">
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title">Payaso IT</h5>
+                <p class="card-text content">En la alcantarilla, me cayeron un montón de carajillos y no supe qué hacer. Los agregué a mi lista de difuntos y El Vals de los Muertos me organizó la fiesta de la alegría.</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-4 d-flex align-items-center">
+          <img src="../../icons/logo1.png" alt="">
+        </div>
+    
+        <div class="col-4 d-flex align-items-center justify-content-center navFooter">
+          <ul>
+              <h3 class="titularMenu">Menú</h3>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Testimonios</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-4 text-center d-flex align-items-center">
+          <div class="contactoFooter">
+            <div>
+              <h3 class="titularContacto">Contacto</h3>
+            </div>
+            <div>
+              <a href="#"><img src="../../icons/twitter.svg" alt="" width="10%" height="10%"></a>
+              <a href="#"><img src="../../icons/facebook.svg" alt="" width="10%" height="10%"></a>
+              <a href="#"><img src="../../icons/instagram.svg" alt="" width="10%" height="10%"></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>

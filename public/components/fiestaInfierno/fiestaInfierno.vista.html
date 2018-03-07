@@ -1,0 +1,150 @@
+<!-- dark -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark pinkNav">
+
+    <a class="navbar-brand mylogo" href="#">El Vals de los Muertos</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPrincipal" aria-controls="navPrincipal"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navPrincipal">
+      <ul class="navbar-nav mr-auto justify-content-end pinkNav">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#!/entierros">Entierros
+            <span class="sr-only">(current)</span>
+          </a>
+        </li> -->
+        <li class="nav-item active">
+          <a class="nav-link myNavLinks" href="/#!/nosotros" target="_self">NOSOTROS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/services">SERVICIOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/testimonios">TESTIMONIOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link myNavLinks" href="/#!/contacto">CONTACTO</a>
+        </li>
+      </ul>
+    </div>
+    
+    
+  </nav>
+</header>
+
+<h1>Agendar una nueva fiesta</h1>
+<div class="col-md-7 d-flex align-items-center justify-content-center">
+  <img src="../../icons/042-maracas.svg" alt="" class="img-fluid" height="500px" width="500px">
+</div>
+
+<div class="gray">
+  <form ng-submit="vm.registrarFiesta(vm.nuevaFiesta)">
+    <div class="form-action">
+      <label for="">Fecha de la Fiesta</label>
+      <input type="date"id="fecha" ng-model="vm.nuevaFiesta.fecha"  required>
+    </div>
+    <div class="form-action">
+        <label for="">Cantidad de horas</label>
+        <input type="number" class="myInput" min="1" id="cantidadHoras" ng-model="vm.nuevaFiesta.horas" required>
+      </div>
+      <div class="form-action">
+        
+          
+        <div class="form-group">
+
+          <label ng-repeat="animador in vm.listaAnimadores">
+            
+
+            <input type="checkbox" class="TheCheckBox" data-checklist-model="vm.animadores" data-checklist-value="animador">{{animador.nombreAnimador}}
+            
+          </label>
+
+        </div>
+        <div class="form-action">
+            <label for="">Seleccione su metodo de pago</label><br>
+
+          <label for="">Efectivo</label>
+          <input type="radio" name="metodoPago" value="Efectivo" ng-model="vm.nuevaFiesta.pago" required > 
+          <label for="">Tarjeta</label>
+          <input type="radio" name="metodoPago" value="Tarjeta" ng-model="vm.nuevaFiesta.pago" required> 
+          
+         </div>
+        <button type="submit" class="btn bEntierro" id="btnGuardar">Guardar</button>
+  </form>
+
+</div>
+<div class="col-9">
+  <table class="table">
+    <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Cantidad de horas</th>
+          <th>Metodo de pago</th>
+          <th>Animadores</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="fiesta in vm.listaFiestas">
+        <td>{{fiesta.getFecha()}}</td>
+        <td>{{fiesta.horas}}</td>
+        <td>{{fiesta.pago}}</td>
+        <td>
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{fiesta.getFecha()}}">
+            Animadores
+          </button>
+
+          <div class="modal fade" id="{{fiesta.getFecha()}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                          <th>Nombre</th>
+                          <th>Costo</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                        <tr ng-repeat="animadores in fiesta.getAnimadores()">
+                          <td>{{animadores.nombreAnimador}}</td>
+                          <td>{{animadores.costo}}</td>
+                        </tr>
+                      </tbody>
+                  </table>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+   
+
+
+
+
+
+
+
+
+
+
+
+        
