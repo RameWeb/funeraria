@@ -1,17 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-const gulp = require('gulp'),
-      connect = require('gulp-connect'),
-      nodemon = require('gulp-nodemon'),
-      todo = require('gulp-todo'),
-      browserSync = require('browser-sync'),
-      paths = {
-        views : './public/components/**/**/*.html',
-        styles : './public/components/**/**/*.css',
-        js: './public/components/**/**/*.js'
-      };
-=======
 // Se inyectan las dependenciasdentro del archivo
 const gulp = require('gulp');
 const connect = require('gulp-connect');
@@ -23,7 +11,6 @@ const paths = {
   styles : './public/components/**/**/*.css',
   js : './public/components/**/**/*.js'
 }
->>>>>>> origin/Camila
 
 gulp.task('connect', () => {
   connect.server({
@@ -32,19 +19,11 @@ gulp.task('connect', () => {
     livereload: true
   });
   browserSync.init({
-<<<<<<< HEAD
     server: './public'
   })
 });
 
 gulp.task('to-do', () => {
-=======
-    server : './public'
-  })
-});
-
-gulp.task('to-do', () =>{
->>>>>>> origin/Camila
   gulp.src(paths.js)
   .pipe(todo())
   .pipe(gulp.dest('./'));
@@ -67,9 +46,6 @@ gulp.task('dependencies', () => {
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/jquery/dist/jquery.min.js',
-<<<<<<< HEAD
-    './node_modules/popper.js/dist/popper.min.js'
-=======
     './node_modules/popper.js/dist/umd/popper.min.js',
     './node_modules/sweetalert/dist/sweetalert.min.js',
     './node_modules/angular/angular.min.js',
@@ -77,11 +53,9 @@ gulp.task('dependencies', () => {
     './node_modules/angular-css/angular-css.min.js',
     './node_modules/oclazyload/dist/ocLazyLoad.min.js',
     './node_modules/checklist-model/checklist-model.js'
->>>>>>> origin/Nicole
   ])
     .pipe(gulp.dest('./public/lib/bootstrap'));
 
-<<<<<<< HEAD
   gulp.src([
     './node_modules/sweetalert/dist/sweetalert.min.js',
   ])
@@ -93,22 +67,11 @@ gulp.task('reload', () => {
   gulp.src([paths.views, paths.styles, paths.js])
     .pipe(connect.reload())
     .pipe(browserSync.stream());
-=======
-gulp.task('reload', () =>{
-  gulp.src([paths.views, paths.styles, paths.js])
-  .pipe(connect.reload())
-  .pipe(browserSync.stream());
->>>>>>> origin/Camila
 });
 
 gulp.task('watch', () => {
   gulp.watch([paths.views, paths.styles,paths.js], ['reload', 'to-do'])
     .on('change', browserSync.reload);
 });
-<<<<<<< HEAD
-
-gulp.task('default', ['connect', 'to-do', 'dependencies', 'reload', 'watch']);
-=======
 // Tarea global que llama todas las tareas
 gulp.task('default', ['connect', 'to-do', 'dependencies','reload','watch']);
->>>>>>> origin/Camila
