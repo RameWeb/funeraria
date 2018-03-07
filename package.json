@@ -1,6 +1,6 @@
 
 {
-  "name": "lab-funeraria",
+  "name": "labFuneraria",
   "version": "1.0.0",
   "description": "laboratorio de funeraria",
   "main": "./public/app.js",
@@ -29,6 +29,10 @@
     "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.6.9",
     "bootstrap": "^4.0.0",
+<<<<<<< HEAD
+=======
+    "checklist-model": "^0.11.0",
+>>>>>>> Dev
     "jquery": "^3.3.1",
     "oclazyload": "^1.1.0",
     "popper.js": "^1.12.9",

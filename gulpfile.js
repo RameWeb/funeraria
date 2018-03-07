@@ -1,4 +1,3 @@
- // Se inyecta el modo estricto de EcmaScript, que elimina los errores comunes de JS
 'use strict';
 
 // Se inyectan las dependenciasdentro del archivo
@@ -13,51 +12,61 @@ const paths = {
   js : './public/components/**/**/*.js'
 }
 
-// Se crea una tarea que conecta el servidor, con la ruta que va a conectar
 gulp.task('connect', () => {
   connect.server({
-    root:'public',
+    root: 'public',
     port: 8000,
     livereload: true
   });
   browserSync.init({
-    server : './public'
+    server: './public'
   })
 });
 
-gulp.task('to-do', () =>{
+gulp.task('to-do', () => {
   gulp.src(paths.js)
   .pipe(todo())
   .pipe(gulp.dest('./'));
 });
 
-// Se crea una tarea que trae todas las dependencias desde los node_modules hasta la carpeta lib dentro de public
 gulp.task('dependencies', () => {
+  gulp.src([
+    './node_modules/angular/angular.min.js'
+  ])
+    .pipe(gulp.dest('./public/lib/angular'));
 
-  // Trae bootstarp desde las dependencias y lo copia dentro de public para poder ser utilizado por el front-end
+  gulp.src([
+    './node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
+    './node_modules/oclazyload/dist/ocLazyLoad.min.js',
+    './node_modules/ui-router-page-title/page-title.min.js'
+  ])
+    .pipe(gulp.dest('./public/lib/angular/routing'));
+
   gulp.src([
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    './node_modules/bootstrap/dist/css/bootstrap.min.css'
-  ])
-  .pipe(gulp.dest('./public/lib/bootstrap'));
-
-  // Trae angular, jquery y popper desde las dependencias y lo copia dentro de public para poder ser utilizado por el front-end
-  gulp.src([
+    './node_modules/bootstrap/dist/css/bootstrap.min.css',
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/popper.js/dist/popper.min.js',
+    './node_modules/popper.js/dist/umd/popper.min.js',
     './node_modules/sweetalert/dist/sweetalert.min.js',
     './node_modules/angular/angular.min.js',
     './node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
     './node_modules/angular-css/angular-css.min.js',
-    './node_modules/oclazyload/dist/ocLazyLoad.min.js'
+    './node_modules/oclazyload/dist/ocLazyLoad.min.js',
+    './node_modules/checklist-model/checklist-model.js'
   ])
-  .pipe(gulp.dest('./public/lib/'));
+    .pipe(gulp.dest('./public/lib/bootstrap'));
+
+  gulp.src([
+    './node_modules/sweetalert/dist/sweetalert.min.js',
+  ])
+    .pipe(gulp.dest('./public/lib/sweetalert'));
+
 });
 
-gulp.task('reload', () =>{
+gulp.task('reload', () => {
   gulp.src([paths.views, paths.styles, paths.js])
-  .pipe(connect.reload())
-  .pipe(browserSync.stream());
+    .pipe(connect.reload())
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch', () => {
