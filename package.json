@@ -1,22 +1,11 @@
 {
   "name": "labFuneraria",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "Arquitectura de proyecto",
-=======
   "description": "laboratorio de funeraria",
->>>>>>> Dev
   "main": "./public/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/KaguilarA/arquitecturaBasicaProyectoWeb1.git"
-  },
-=======
->>>>>>> Dev
   "keywords": [
     "MEAN",
     "ANGULARJS",
