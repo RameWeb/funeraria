@@ -1,9 +1,7 @@
 <!-- dark -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark pinkNav">
-
     <a class="navbar-brand mylogo" href="#">El Vals de los Muertos</a>
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navPrincipal" aria-controls="navPrincipal"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,10 +15,10 @@
           </a>
         </li> -->
         <li class="nav-item active">
-          <a class="nav-link myNavLinks" href="/#!/nosotros" target="_self">NOSOTROS</a>
+          <a class="nav-link myNavLinks" href="/#!/nosotros">NOSOTROS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link myNavLinks" href="/#!/services">SERVICIOS</a>
+          <a class="nav-link myNavLinks" href="/#!/servicios">SERVICIOS</a>
         </li>
         <li class="nav-item">
           <a class="nav-link myNavLinks" href="/#!/testimonios">TESTIMONIOS</a>
@@ -29,15 +27,14 @@
           <a class="nav-link myNavLinks" href="/#!/contacto">CONTACTO</a>
         </li>
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn my-2 my-sm-0 btnAction" type="button">Iniciar Sesión</button>
+      </form>
     </div>
-    
-    <form class="form-inline my-2 my-lg-0">
-      <button class="btn my-2 my-sm-0 btnAction" type="button">Iniciar Sesión</button>
-    </form>
   </nav>
 </header>
 
-<body>
+<body class="gray">
   <!-- hero -->
   <div class="jumbotron-fluid cover d-flex align-items-center">
     <div class="container">
@@ -54,7 +51,17 @@
   <section class="container">
     <div class="row">
       <section id="nosotros">
-
+        <div class="row">
+          <div class="col-6 d-flex align-items-center">
+            <div class="titular">
+              <h2>Nosotros</h2>
+              <p>Con más de 10 años de experiencia, Funeraria El vals de los muertos es la empresa fúnebre que tanto ha estado buscando para ocultar sus cuerpos del delito. Contamos con un equipo humano altamente calificado y capacitado para realizar este tipo de hazañas. ¡No lo piense más y deje que nosotros le resolvamos ese pequeño problema!</p>
+            </div>
+          </div>
+          <div class="col-6 imgLogo">
+            <img src="../../icons/logo.png" alt="">
+          </div>
+        </div>
       </section>
 
       <section id="servicios">
@@ -156,7 +163,35 @@
 
   <!-- Footer -->
   <footer>
-
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-4 d-flex align-items-center">
+          <img src="../../icons/logo1.png" alt="">
+        </div>
+    
+        <div class="col-4 d-flex align-items-center justify-content-center navFooter">
+          <ul>
+              <h3 class="titularMenu">Menú</h3>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Testimonios</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-4 text-center d-flex align-items-center">
+          <div class="contactoFooter">
+            <div>
+              <h3 class="titularContacto">Contacto</h3>
+            </div>
+            <div>
+              <a href="#"><img src="../../icons/twitter.svg" alt="" width="10%" height="10%"></a>
+              <a href="#"><img src="../../icons/facebook.svg" alt="" width="10%" height="10%"></a>
+              <a href="#"><img src="../../icons/instagram.svg" alt="" width="10%" height="10%"></a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </footer>
-  
 </body>

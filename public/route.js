@@ -9,9 +9,9 @@
 
     $stateProvider
 
-    .state('landingPage', {
+    .state('landing-page', {
       url: '/',
-      templateUrl: './components/landingPage/landingPage.view.html',
+      templateUrl: './components/landing-page/landing-page.view.html',
       data:{
         pageTitle: 'Inicio | Funeraria el vals de los muertos'
       }
@@ -107,6 +107,6 @@
       controllerAs: 'vm'
     })
 
-    $urlRouterProvider.otherwise('/users');
+    $urlRouterProvider.otherwise('/');
   }
 })();
