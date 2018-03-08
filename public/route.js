@@ -17,8 +17,26 @@
       }
     })
 
+    .state('inicio', {
+      url: '/inicio',
+      templateUrl: './components/inicio/inicio.view.html',
+      data:{
+        pageTitle: 'Inicio SesiÃ³n | Funeraria'
+      },
+      params: {
+        objUsuarioTemp: ''
+      },
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/inicio/inicio.controller.js')
+        }]
+      },
+      controller: 'controladorInicio',
+      controllerAs: 'vm'
+    })
+
     .state('usuarios', {
-      url: '/users',
+      url: '/usuarios',
       templateUrl: './components/usuarios/usuarios.view.html',
       data:{
         pageTitle: 'Registro usuarios | Ejemplo Arquitectura'

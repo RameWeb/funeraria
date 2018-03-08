@@ -43,10 +43,22 @@
       vm.nuevoDifunto = null;
     };
 
-    vm.registrarArreglo = (pDifunto) => {
+    vm.registrarEntierro = (pDifunto) => {
       console.log(pDifunto);
 
       $state.go('entierros', {objDifuntoTemp: JSON.stringify(pDifunto)})
+    }
+
+    vm.registrarRetoque = (pDifunto) => {
+      console.log(pDifunto);
+
+      $state.go('retoques', {objDifuntoTemp: JSON.stringify(pDifunto)})
+    }
+
+    vm.registrarFiestaInfierno = (pDifunto) => {
+      console.log(pDifunto);
+
+      $state.go('registroFiesta', {objDifuntoTemp: JSON.stringify(pDifunto)})
     }
 
     vm.volver = () => {
