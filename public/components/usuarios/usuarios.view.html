@@ -6,65 +6,160 @@
     <form ng-submit="vm.registrarUsuario(vm.nuevoUsuario)">
 
       <div class="form-group">
-        <label for="">Foto</label>
-        <input type="file" class="form-control" ng-model="vm.nuevoUsuario.foto" required>
-    </div>
+          <label for="">Foto</label>
+          <input type="file" class="form-control" ng-model="vm.nuevoUsuario.foto" required>
+      </div>
 
-    <div class="form-group">
-        <label for="">Cédula</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.cedula" required>
-    </div>
+      <div class="form-group">
+          <label for="">CÃ©dula</label>
+          <input type="text" class="form-control" ng-model="vm.nuevoUsuario.cedula" required>
+      </div>
 
-    <div class="form-group">
-        <label for="">Nombre 1</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.nombre" required>
+      <div class="form-group">
+          <label for="">Nombre 1</label>
+          <input type="text" class="form-control" ng-model="vm.nuevoUsuario.nombre" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="">Apellido 1</label>
+          <input type="text" class="form-control" ng-model="vm.nuevoUsuario.apellido" required>
+        </div>
+
+      <div class="form-group">
+          <label for="">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" ng-model="vm.nuevoUsuario.fechanacimiento" required>
+      </div>
+
+      <div class="form-group">
+          <label for="">Sexo</label>
+          <select class="custom-select" ng-model="vm.nuevoUsuario.sexo" required>
+              <option>Femenino</option>
+              <option>Masculino</option>
+          </select>
+            
       </div>
       
       <div class="form-group">
-        <label for="">Apellido 1</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.apellido" required>
+        <label for="">Direcci&oacute;n</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.ubicacion" required>
       </div>
 
-    <div class="form-group">
-        <label for="">Fecha de Nacimiento</label>
-        <input type="date" class="form-control" ng-model="vm.nuevoUsuario.fechanacimiento" required>
-    </div>
-
-    <div class="form-group">
-        <label for="">Sexo</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.sexo" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="">Ubicación</label>
-      <input type="text" class="form-control" ng-model="vm.nuevoUsuario.ubicacion" required>
-    </div>
-
-    <div class="form-group">
+      <div class="form-group">
         <label for="">Provincia</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.provincia" required>
+        <select class="custom-select" ng-model="vm.nuevoUsuario.provincia" required>
+            <option>Alajuela</option>
+            <option>Cartago</option>
+            <option>Guanacaste</option>
+            <option>Heredia</option>
+            <option>Lim&oacute;n</option>
+            <option>Puntarenas</option>
+            <option>San Jos&eacute;</option>
+        </select>
       </div>
 
-    <div class="form-group">
-      <label for="">Cantón</label>
-      <input type="text" class="form-control" ng-model="vm.nuevoUsuario.canton" required>
-    </div>
+      <div class="form-group">
+        <label for="">CantÃ³n</label>
+        <select class="custom-select" ng-model="vm.nuevoUsuario.canton" required>
+          <option>Abangares</option>
+          <option>Acosta</option>
+          <option>Alajuela</option>
+          <option>Alajuelita</option>
+          <option>Alvarado</option>
+          <option>AserrÃ­</option>
+          <option>Atenas</option>
+          <option>Bagaces</option>
+          <option>Barva</option>
+          <option>BelÃ©n</option>
+          <option>Buenos Aires</option>
+          <option>CaÃ±as</option>
+          <option>Carrillo</option>
+          <option>Cartago</option>
+          <option>Corredores</option>
+          <option>Coto Brus</option>
+          <option>Curridabat</option>
+          <option>Desamparados</option>
+          <option>Dota</option>
+          <option>El Guarco</option>
+          <option>EscazÃº</option>
+          <option>Esparza</option>
+          <option>Flores</option>
+          <option>Garabito</option>
+          <option>Goicoechea</option>
+          <option>Golfito</option>
+          <option>Grecia</option>
+          <option>GuÃ¡cimo</option>
+          <option>Guatuso</option>
+          <option>Heredia</option>
+          <option>Hojancha</option>
+          <option>JimÃ©nez</option>
+          <option>La Cruz</option>
+          <option>La UniÃ³n</option>
+          <option>LeÃ³n CortÃ©s Castro</option>
+          <option>Liberia</option>
+          <option>LimÃ³n</option>
+          <option>Los Chiles</option>
+          <option>Matina</option>
+          <option>Montes de Oca</option>
+          <option>Montes de Oro</option>
+          <option>Mora</option>
+          <option>Moravia</option>
+          <option>Nandayure</option>
+          <option>Naranjo</option>
+          <option>Nicoya</option>
+          <option>Oreamuno</option>
+          <option>Orotina</option>
+          <option>Osa</option>
+          <option>Palmares</option>
+          <option>ParaÃ­so</option>
+          <option>Parrita</option>
+          <option>PÃ©rez ZeledÃ³n</option>
+          <option>PoÃ¡s</option>
+          <option>PococÃ­</option>
+          <option>Puntarenas</option>
+          <option>Puriscal</option>
+          <option>Quepos</option>
+          <option>RÃ­o Cuarto</option>
+          <option>San Carlos</option>
+          <option>San Isidro</option>
+          <option>San JosÃ©</option>
+          <option>San Mateo</option>
+          <option>San Pablo</option>
+          <option>San Rafael</option>
+          <option>San RamÃ³n</option>
+          <option>Santa Ana</option>
+          <option>Santa BÃ¡rbara</option>
+          <option>Santa Cruz</option>
+          <option>Santo Domingo</option>
+          <option>SarapiquÃ­</option>
+          <option>Siquirres</option>
+          <option>Talamanca</option>
+          <option>TarrazÃº</option>
+          <option>TibÃ¡s</option>
+          <option>TilarÃ¡n</option>
+          <option>Turrialba</option>
+          <option>Turrubares</option>
+          <option>Upala</option>
+          <option>Valverde Vega</option>
+          <option>VÃ¡squez de Coronado</option>
+          <option>Zarcero</option>
+        </select>
+      </div>
 
-    <div class="form-group">
-      <label for="">Distrito</label>
-      <input type="text" class="form-control" ng-model="vm.nuevoUsuario.distrito" required>
-    </div>
+      <div class="form-group">
+        <label for="">Distrito</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.distrito" required>
+      </div>
 
-    <div class="form-group">
-      <label for="">Usuario</label>
-      <input type="text" class="form-control" ng-model="vm.nuevoUsuario.usuario" required>
-    </div>
+      <div class="form-group">
+        <label for="">Usuario</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoUsuario.usuario" required>
+      </div>
 
-    <div class="form-group">
-      <label for="">Contraseña</label>
-      <input type="password" class="form-control" ng-model="vm.nuevoUsuario.contrasenna" required>
-    </div>
-      
+      <div class="form-group">
+        <label for="">ContraseÃ±a</label>
+        <input type="password" class="form-control" ng-model="vm.nuevoUsuario.contrasenna" required>
+      </div>
+    
       <button type="submit" class="btn btn-success">Registrar</button>
       
     </form>
@@ -86,13 +181,13 @@
     </thead>
     <tbody>
       <tr ng-repeat="usuario in vm.listaUsuarios">
-       <td>{{usuario.cedula}}</td>
+        <td>{{usuario.cedula}}</td>
         <td>{{usuario.nombre}}</td>
         <td>{{usuario.apellido}}</td>
         <td>{{usuario.fechanacimiento | date:"dd'/'MM'/'yyyy"}}</td>
         <td>{{usuario.provincia}}</td>
         <td>
-          <button type="button" class="btn btn-secondary" ng-click="vm.registrarDifuntos(usuario)">Registrar difunto</button>
+          <button type="button" class="btn btn-secondary" ng-click="vm.registrarDifunto(usuario)">Registrar Difunto</button>
         </td>
       </tr>
     </tbody>
