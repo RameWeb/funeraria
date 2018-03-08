@@ -34,7 +34,7 @@
 
     .state('difuntos', {
       url: '/difuntos',
-      templateUrl: './components/difuntos/difuntos.vista.html',
+      templateUrl: './components/difuntos/difunto.view.html',
       data:{
         pageTitle: 'Mantenimiento de Difuntos | Funeraria'
       },
@@ -43,11 +43,11 @@
       },
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
-          return $ocLazyLoad.load('./components/difuntos/difuntos.controlador.js')
+          return $ocLazyLoad.load('./components/difuntos/difunto.controller.js')
         }]
       },
       css: './components/difuntos/difuntos.estilos.css',
-      controller: 'controladorDifuntos',
+      controller: 'controladorDifunto',
       controllerAs: 'vm'
     }) 
 
