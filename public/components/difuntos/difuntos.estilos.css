@@ -9,7 +9,7 @@
 input.myCheckbox[type=checkbox]:checked + label:before{
   background-color: #FC427B !important;
 }
-input,select{
+input.myInput, select.mySelect{
   background-color: #222222 !important;
   color: #FC427B !important;
   border: none !important;
