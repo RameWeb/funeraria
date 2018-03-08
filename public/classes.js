@@ -62,13 +62,6 @@ class Difunto{
   }
 }
 
-class Entierros{
-  constructor(pcosto, pdescripcion){
-    this.costo = pcosto;
-    this.descripcion = pdescripcion;
-  }
-}
-
 class Retoques{
   constructor(pTipoRetoque, pCosto, pRetoques){
       this.tipoRetoque = pTipoRetoque;
@@ -76,7 +69,7 @@ class Retoques{
       this.retoques = pRetoques;
   }
 }
-class Entierro {
+class Entierros {
   constructor(pHoraInicio,pHoraFinal,pFecha,pLugar,pPrioridad){
     this.horaInicio = pHoraInicio;
     this.horaFinal = pHoraFinal;
