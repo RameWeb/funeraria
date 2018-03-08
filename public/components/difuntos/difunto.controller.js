@@ -14,6 +14,8 @@
       $state.go('usuarios');
     }
 
+
+
     let objSinFormatoUsuario = JSON.parse($stateParams.objUsuarioTemp);
 
     let objUsuario = new Cliente(objSinFormatoUsuario.foto,objSinFormatoUsuario.cedula,objSinFormatoUsuario.nombre,objSinFormatoUsuario.apellido,objSinFormatoUsuario.fechanacimiento,objSinFormatoUsuario.sexo,objSinFormatoUsuario.ubicacion,objSinFormatoUsuario.provincia,objSinFormatoUsuario.canton,objSinFormatoUsuario.distrito,objSinFormatoUsuario.usuario,objSinFormatoUsuario.contrasenna);
@@ -28,7 +30,7 @@
 
     vm.registrarDifunto = (pnuevodifunto) => {
 
-      let objDifuntoNuevo = new Difunto(pnuevodifuntos.apodo, pnuevodifuntos.edad, pnuevodifuntos.sexo, pnuevodifuntos.tamanno, pnuevodifuntos.idlapida);
+      let objDifuntoNuevo = new Difunto(pnuevodifunto.apodo, pnuevodifunto.edad, pnuevodifunto.sexo, pnuevodifunto.tamanno, pnuevodifunto.idlapida);
 
       servicioUsuarios.addDifunto(objDifuntoNuevo, objUsuario);
 
@@ -44,7 +46,7 @@
     vm.registrarArreglo = (pDifunto) => {
       console.log(pDifunto);
 
-      $state.go('reparaciones', {objDifuntoTemp: JSON.stringify(pDifunto)})
+      $state.go('entierros', {objDifuntoTemp: JSON.stringify(pDifunto)})
     }
 
     vm.volver = () => {

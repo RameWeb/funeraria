@@ -5,31 +5,31 @@
     <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
 
       <div class="form-group">
+        <label for="">N. L&aacute;pida</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.idlapida" required>
+      </div>
+
+      <div class="form-group">
         <label for="">Apodo</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoDifuntos.apodo" required>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.apodo" required>
       </div>
 
       <div class="form-group">
         <label for="">Edad</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.edad" required>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.edad" required>
       </div>
 
       <div >
         <label for="">Sexo</label>
-        <select class="custom-select" ng-model="vm.nuevoDifuntos.sexo" required>
-        <option>Femenino</option>
-        <option>Masculino</option>      
+        <select class="custom-select" ng-model="vm.nuevoDifunto.sexo" required>
+          <option>Femenino</option>
+          <option>Masculino</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="">TamaÃ±o</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.tamanno" required>
-      </div>
-
-      <div class="form-group">
-        <label for="">N. LÃ¡pida</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifuntos.idlapida" required>
+        <label for="">Tama&ntilde;o</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.tamanno" required>
       </div>
 
       <button type="submit" class="btn btn-success">Registrar</button>
@@ -44,19 +44,24 @@
   <table class="table">
     <thead>
         <tr>
-          <th>Modelo</th>
-          <th>Matricula</th>
-          <th>Marca</th>
-          <th>Acciones</th>
+            <th>N. L&aacute;pida</th>
+            <th>Apodo</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Tama&ntilde;o</th>
         </tr>
     </thead>
     <tbody>
       <tr ng-repeat="difunto in vm.listaDifuntos">
-        <td>{{difunto.modelo}}</td>
-        <td>{{difunto.matricula}}</td>
-        <td>{{difunto.marca}}</td>
+        <td>{{difunto.idlapida}}</td>
+        <td>{{difunto.apodo}}</td>
+        <td>{{difunto.edad}}</td>
+        <td>{{difunto.sexo}}</td>
+        <td>{{difunto.tamanno}}</td>
         <td>
-          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(difunto)">Reparaciones</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(difunto)">Entierros</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(difunto)">Retoques</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarArreglo(difunto)">Fiestas</button>
         </td>
       </tr>
     </tbody>

@@ -1,11 +1,7 @@
 (() => {
   'use strict';
   angular
-<<<<<<< HEAD
   .module('arquitectura')
-=======
-  .module('labFuneraria')
->>>>>>> Dev
   .service('servicioUsuarios', servicioUsuarios);
 
   servicioUsuarios.$inject = ['$log','$http'];
@@ -15,16 +11,10 @@
     let publicAPI = {
       addUsuario : _addUsuario,
       getUsuarios : _getUsuarios,
-<<<<<<< HEAD
       addDifunto : _addDifunto,
       getDifuntos : _getDifuntos,
-      addReparaciones : _addReparaciones,
-      getReparaciones : _getReparaciones
-=======
-      addDifuntos : _addDifuntos,
-      getDifuntos : _getDifuntos,
-      
->>>>>>> Dev
+      addEntierros : _addEntierros,
+      getEntierros : _getEntierros
     }
     return publicAPI;
 
@@ -45,29 +35,18 @@
       }else{
         listaUsuariosLocal.forEach(obj => {
           
-<<<<<<< HEAD
           let objUsuarios = new Cliente(obj.foto,obj.cedula,obj.nombre,obj.apellido,obj.fechanacimiento,obj.sexo,obj.ubicacion,obj.provincia,obj.canton,obj.distrito,obj.usuario,obj.contrasenna);
 
           obj.difuntos.forEach(objDifunto => {
-            let objTempDifunto = new Difunto(objDifunto.apodo, objDifunto.edad, objDifunto.sexo, objDifunto.tamanno, objDifunto.idlapida);
+            let objTempDifunto = new Difunto(objDifunto.idlapida,objDifunto.apodo, objDifunto.edad, objDifunto.sexo, objDifunto.tamanno);
 
             objUsuarios.agregarDifunto(objTempDifunto);
 
-            objDifunto.reparaciones.forEach(objReparciones => {
-              let objTempReparaciones = new Reparaciones(objReparciones.costo, objReparciones.descripcion);
+            objDifunto.entierros.forEach(objReparciones => {
+              let objTempEntierros = new Entierros(objReparciones.costo, objReparciones.descripcion);
 
-              objTempDifunto.agregarReparaciones(objTempReparaciones);
+              objTempDifunto.agregarEntierros(objTempEntierros);
             })
-=======
-          let objUsuarios = new Cliente(obj.foto, obj.cedula, obj.nombre, obj.apellido, obj.fechanacimiento,obj.sexo, obj.ubicacion, obj.provincia, obj.canton, obj.distrito, obj.usuario, obj.contrasenna);
-
-          obj.difuntos.forEach(objDifuntos => {
-            let objTempDifuntos = new Difuntos(objDifuntos.apodo, objDifuntos.edad, objDifuntos.sexo, objDifuntos.tamanno, objDifuntos.idlapida);
-
-            objUsuarios.agregarDifuntos(objTempDifuntos);
-
-            
->>>>>>> Dev
           })
 
           listaUsuarios.push(objUsuarios);
@@ -77,21 +56,12 @@
       return listaUsuarios;
     }
 
-<<<<<<< HEAD
     function _addDifunto(pdifunto, pusuario){
       let listaUsuarios = _getUsuarios();
 
       for(let i = 0; i < listaUsuarios.length; i++){
         if (pusuario.getCedula() == listaUsuarios[i].getCedula()){
           listaUsuarios[i].agregarDifunto(pdifunto);
-=======
-    function _addDifuntos(pdifuntos, pusuario){
-      let listaUsuarios = _getUsuarios();
-
-      for(let i = 0; i < listaUsuarios.length; i++){
-        if (pusuario.getcedula() == listaUsuarios[i].getcedula()){
-          listaUsuarios[i].agregarDifuntos(pdifuntos);
->>>>>>> Dev
         }
       }
 
@@ -103,11 +73,7 @@
       let difuntosUsuario = [];
 
       for(let i = 0; i < listaUsuarios.length; i++){
-<<<<<<< HEAD
         if (objUsuario.getCedula() == listaUsuarios[i].getCedula()){
-=======
-        if (objUsuario.getcedula() == listaUsuarios[i].getcedula()){
->>>>>>> Dev
           difuntosUsuario = listaUsuarios[i].getDifuntos();
         }
       }
@@ -115,9 +81,8 @@
       return difuntosUsuario;
     }
 
-<<<<<<< HEAD
-    // Funcion que registra las reparaciones dentro de los difuntos
-    function _addReparaciones(pdifunto, preparacion){
+    // Funcion que registra los entierros dentro de los difuntos
+    function _addEntierros(pdifunto, preparacion){
       let listaUsuarios = _getUsuarios();
       let listaDifuntos = [];
 
@@ -127,38 +92,32 @@
         // Ciclo que recorre todos los difuntos por usuario
         for(let j=0 ;j < listaUsuarios[i].getDifuntos().length; j++){
 
-          // Si la matricula del difunto coincide
-          if(listaUsuarios[i].getDifuntos()[j].getmatricula() == pdifunto.getmatricula()){
+          // Si el idlapida del difunto coincide
+          if(listaUsuarios[i].getDifuntos()[j].getidlapida() == pdifunto.getidlapida()){
 
             // Le registra la reparación
-            listaUsuarios[i].getDifuntos()[j].agregarReparaciones(preparacion);
+            listaUsuarios[i].getDifuntos()[j].agregarEntierros(preparacion);
           }
         }
       }
       actualizarLocal(listaUsuarios);
     }
 
-    // Funcion que obtiene todas las reparaciones de los difuntos
-    function _getReparaciones(objDifunto){
+    // Funcion que obtiene todas los entierros de los difuntos
+    function _getEntierros(objDifunto){
       let listaUsuarios = _getUsuarios();
-      let reparacionesDifuntos = [];
+      let entierrosDifuntos = [];
 
       for(let i = 0; i < listaUsuarios.length; i++){
         for(let j=0 ;j < listaUsuarios[i].getDifuntos().length; j++){
 
-          if (objDifunto.getmatricula() == listaUsuarios[i].getDifuntos()[j].getmatricula()){
-            reparacionesDifuntos = listaUsuarios[i].getDifuntos()[j].getReparaciones();
+          if (objDifunto.getidlapida() == listaUsuarios[i].getDifuntos()[j].getidlapida()){
+            entierrosDifuntos = listaUsuarios[i].getDifuntos()[j].getEntierros();
           }
         }
       }
-      return reparacionesDifuntos;
+      return entierrosDifuntos;
     }
-=======
-
-    
-
-    
->>>>>>> Dev
 
     function actualizarLocal(plistaActualizada){
       localStorage.setItem('usuariosLS', JSON.stringify(plistaActualizada));
