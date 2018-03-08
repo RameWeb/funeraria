@@ -42,8 +42,8 @@
 
             objUsuarios.agregarDifunto(objTempDifunto);
 
-            objDifunto.entierros.forEach(objReparciones => {
-              let objTempEntierros = new Entierros(objReparciones.costo, objReparciones.descripcion);
+            objDifunto.entierros.forEach(objEntierros => {
+              let objTempEntierros = new Entierros(objEntierros.HoraInicio,objEntierros.HoraFinal,objEntierros.Fecha,objEntierros.Lugar,objEntierros.Prioridad);
 
               objTempDifunto.agregarEntierros(objTempEntierros);
             })
