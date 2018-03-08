@@ -95,7 +95,7 @@
           // Si el idlapida del difunto coincide
           if(listaUsuarios[i].getDifuntos()[j].getidlapida() == pdifunto.getidlapida()){
 
-            // Le registra la reparación
+            // Le registra el Entierro
             listaUsuarios[i].getDifuntos()[j].agregarEntierros(preparacion);
           }
         }
