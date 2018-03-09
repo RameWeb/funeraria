@@ -188,3 +188,88 @@ h3.titularContacto{
   background-color: #FC427B;
   color: #fff;
 }
+
+/*==================================
+ESTILOS RETOQUES
+====================================*/
+
+.db-bk-color-one {
+  background-color: #ffb655;
+  }
+  
+  .db-bk-color-two {
+  background-color: #85E3CD;
+  
+  }
+  
+  .db-bk-color-three {
+  background-color: #ff7956;
+  }
+  
+  .db-padding-btm {
+  padding-bottom: 50px;
+  }
+  .db-padding-top {
+  padding-top: 30px;
+  }
+  
+  .db-button-color-square {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.50);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  }
+  
+  .db-button-color-square:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.50);
+  border: none;
+  }
+  
+  .db-pricing-eleven {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  color: #fff;
+  line-height: 30px;
+  }
+  
+  .db-pricing-eleven .price {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 40px 20px 20px 20px;
+  font-size: 60px;
+  font-weight: 900;
+  color: #FFFFFF;
+  }
+  
+  .db-pricing-eleven .price small {
+  color: #B8B8B8;
+  display: block;
+  font-size: 12px;
+  margin-top: 22px;
+  }
+  
+  .db-pricing-eleven .type {
+  background-color: #3e3d42;
+  padding: 50px 20px;
+  font-weight: 900;
+  font-size: 1.5em;
+  }
+  
+  .db-attached > .col-lg-4,
+  .db-attached > .col-lg-3,
+  .db-attached > .col-md-4,
+  .db-attached > .col-md-3,
+  .db-attached > .col-sm-4,
+  .db-attached > .col-sm-3 {
+  padding-left: 0;
+  padding-right: 0;
+  }
+  
+  button.btn{
+  margin: 20px;
+  }

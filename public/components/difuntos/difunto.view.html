@@ -1,0 +1,70 @@
+<h1>Difuntos a nombre de {{vm.usuarioActivo}}</h1>
+
+<div class="col-4 my-3">
+
+    <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
+
+      <div class="form-group">
+        <label for="">N. L&aacute;pida</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.idlapida" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">Apodo</label>
+        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.apodo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">Edad</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.edad" required>
+      </div>
+
+      <div >
+        <label for="">Sexo</label>
+        <select class="custom-select" ng-model="vm.nuevoDifunto.sexo" required>
+          <option>Femenino</option>
+          <option>Masculino</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="">Tama&ntilde;o</label>
+        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.tamanno" required>
+      </div>
+
+      <button type="submit" class="btn btn-success">Registrar</button>
+
+      <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
+
+    </form>
+
+</div>
+
+<div class="col-9">
+  <table class="table">
+    <thead>
+        <tr>
+            <th>N. L&aacute;pida</th>
+            <th>Apodo</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Tama&ntilde;o</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="difunto in vm.listaDifuntos">
+        <td>{{difunto.idlapida}}</td>
+        <td>{{difunto.apodo}}</td>
+        <td>{{difunto.edad}}</td>
+        <td>{{difunto.sexo}}</td>
+        <td>{{difunto.tamanno}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarEntierro(difunto)">Entierros</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarRetoque(difunto)">Retoques</button>
+          <button type="button" class="btn btn-warning" ng-click="vm.registrarFiestaInfierno(difunto)">Fiestas</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

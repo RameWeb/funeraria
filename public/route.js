@@ -17,8 +17,26 @@
       }
     })
 
+    .state('inicio', {
+      url: '/inicio',
+      templateUrl: './components/inicio/inicio.view.html',
+      data:{
+        pageTitle: 'Inicio SesiÃ³n | Funeraria'
+      },
+      params: {
+        objUsuarioTemp: ''
+      },
+      resolve: {
+        load: ['$ocLazyLoad', ($ocLazyLoad) => {
+          return $ocLazyLoad.load('./components/inicio/inicio.controller.js')
+        }]
+      },
+      controller: 'controladorInicio',
+      controllerAs: 'vm'
+    })
+
     .state('usuarios', {
-      url: '/users',
+      url: '/usuarios',
       templateUrl: './components/usuarios/usuarios.view.html',
       data:{
         pageTitle: 'Registro usuarios | Ejemplo Arquitectura'
@@ -34,7 +52,7 @@
 
     .state('difuntos', {
       url: '/difuntos',
-      templateUrl: './components/difuntos/difuntos.vista.html',
+      templateUrl: './components/difuntos/difunto.view.html',
       data:{
         pageTitle: 'Mantenimiento de Difuntos | Funeraria'
       },
@@ -43,11 +61,11 @@
       },
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
-          return $ocLazyLoad.load('./components/difuntos/difuntos.controlador.js')
+          return $ocLazyLoad.load('./components/difuntos/difunto.controller.js')
         }]
       },
       css: './components/difuntos/difuntos.estilos.css',
-      controller: 'controladorDifuntos',
+      controller: 'controladorDifunto',
       controllerAs: 'vm'
     }) 
 
@@ -84,7 +102,7 @@
       css: './components/retoques/retoques.estilo.css',
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
-          return $ocLazyLoad.load('./components/retoques/retoques.contolador.js')
+          return $ocLazyLoad.load('./components/retoques/retoques.controlador.js')
         }]
       },
       controller: 'controladorRetoques',
