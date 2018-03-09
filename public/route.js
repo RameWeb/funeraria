@@ -102,7 +102,7 @@
       css: './components/retoques/retoques.estilo.css',
       resolve: {
         load: ['$ocLazyLoad', ($ocLazyLoad) => {
-          return $ocLazyLoad.load('./components/retoques/retoques.contolador.js')
+          return $ocLazyLoad.load('./components/retoques/retoques.controlador.js')
         }]
       },
       controller: 'controladorRetoques',
