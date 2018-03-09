@@ -1,43 +1,54 @@
-<h1>Difuntos a nombre de {{vm.usuarioActivo}}</h1>
+<div class="container h-100 my-5">
+  <div class="row">
+      <div class="col-md-5">
+  
+<div>
+<h1 class="headlines" >Difuntos a nombre de {{vm.usuarioActivo}}</h1>
+</div> 
 
-<div class="col-4 my-3">
 
-    <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
 
-      <div class="form-group">
-        <label for="">N. L&aacute;pida</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.idlapida" required>
-      </div>
+<div class="my-4">
 
-      <div class="form-group">
-        <label for="">Apodo</label>
-        <input type="text" class="form-control" ng-model="vm.nuevoDifunto.apodo" required>
-      </div>
+  <form ng-submit="vm.registrarDifunto(vm.nuevoDifunto)">
+    
+      <div class="col">
 
-      <div class="form-group">
-        <label for="">Edad</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.edad" required>
-      </div>
+    <div class="form-group">
+      <label for="">N. L&aacute;pida</label>
+      <input type="number" class="form-control myInput" ng-model="vm.nuevoDifunto.idlapida" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="">Apodo</label>
+      <input type="text" class="form-control myInput" ng-model="vm.nuevoDifunto.apodo" required>
+    </div>
 
-      <div >
-        <label for="">Sexo</label>
-        <select class="custom-select" ng-model="vm.nuevoDifunto.sexo" required>
-          <option>Femenino</option>
-          <option>Masculino</option>
-        </select>
-      </div>
+    <div class="form-group">
+      <label for="">Edad</label>
+      <input type="number" class="form-control myInput" ng-model="vm.nuevoDifunto.edad" required>
+    </div>
 
-      <div class="form-group">
-        <label for="">Tama&ntilde;o</label>
-        <input type="number" class="form-control" ng-model="vm.nuevoDifunto.tamanno" required>
-      </div>
+    <div >
+      <label for="">Sexo</label>
+      <select class="form-control mySelect" ng-model="vm.nuevoDifunto.sexo"  required>
+        <option>Femenino</option>
+        <option>Masculino</option>
+      </select>
+      
+    </div>
 
-      <button type="submit" class="btn btn-success">Registrar</button>
+    <div class="form-group">
+      <label for="">Tamaño</label>
+      <input type="number" class="form-control myInput" ng-model="vm.nuevoDifunto.tamanno" required>
+    </div>
 
-      <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
+    <button type="submit" class="btn btn-success">Registrar</button>
 
-    </form>
+    <button type="button" class="btn btn-danger" ng-click="vm.volver()">Regresar</button>
 
+  </form>
+</div>
 </div>
 
 <div class="col-9">
@@ -58,13 +69,18 @@
         <td>{{difunto.edad}}</td>
         <td>{{difunto.sexo}}</td>
         <td>{{difunto.tamanno}}</td>
+        
         <td>
-          <button type="button" class="btn btn-warning" ng-click="vm.registrarEntierro(difunto)">Entierros</button>
-          <button type="button" class="btn btn-warning" ng-click="vm.registrarRetoque(difunto)">Retoques</button>
-          <button type="button" class="btn btn-warning" ng-click="vm.registrarFiestaInfierno(difunto)">Fiestas</button>
-        </td>
+            <button type="button" class="btn btn-secondary" ng-click="vm.registrarEntierro(difunto)">Entierros</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary" ng-click="vm.registrarRetoque(difunto)">Retoques</button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary" ng-click="vm.registrarFiestaInfierno(difunto)">Fiestas</button>
+          </td>
+          
       </tr>
     </tbody>
   </table>
 </div>
-
