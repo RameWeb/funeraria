@@ -8,8 +8,6 @@
   function controladorRetoques(){
     let vm = this;
     
-    // let listaUsuarios = [{nombre: 'Camila', apodo:'Cami', retoques:[]}];
-
     let listaRetoques = [];
 
     vm.btnAgregarMaquillaje = true;

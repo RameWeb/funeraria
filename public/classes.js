@@ -43,10 +43,15 @@ class Difunto{
     this.sexo = psexo;
     this.tamanno = ptamanno;
     this.entierros = [];
+    this.retoques = [];
   }
 
   agregarEntierros(pnuevoEntierro){
     this.entierros.push(pnuevoEntierro);
+  }
+
+  agregarRetoque(pnuevoRetoque){
+    this.retoques.push(pnpnuevoRetoqueue);
   }
 
   getEntierros(){
