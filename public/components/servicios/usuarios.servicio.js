@@ -100,6 +100,7 @@
           }
         }
       }
+      console.log(listaUsuarios);
       actualizarLocal(listaUsuarios);
     }
 

@@ -4,9 +4,9 @@
   .module('labFuneraria')
   .controller('controladorEntierros', controladorEntierros);
 
-  controladorEntierros.$inject = ['servicioEntierros'];
+  controladorEntierros.$inject = ['$stateParams', '$state','servicioUsuarios'];
 
-  function controladorEntierros(servicioEntierros){
+  function controladorEntierros($stateParams, $state, servicioUsuarios){
     let vm = this;
 
     vm.nuevoEntierro = {};
@@ -33,8 +33,11 @@
       vm.nuevoEntierro.prioridad = vm.listarPrioridades(vm.nuevoEntierro.p1,vm.nuevoEntierro.p2,vm.nuevoEntierro.p3,vm.nuevoEntierro.p4);
 
       // Tomamos el objeto sin formato y lo comvertimos en un objeto de tipo cliente
-      let objNuevoEntierro = new Entierros(vm.nuevoEntierro.horaInicio,vm.nuevoEntierro.horaFinal,vm.nuevoEntierro.fecha,vm.nuevoEntierro.lugar, vm.nuevoEntierro.prioridad);
-      console.log(objNuevoEntierro);
+      let objNuevoEntierro = new Entierros(vm.nuevoEntierro.horaInicio,vm.nuevoEntierro.horaFinal,vm.nuevoEntierro.fecha,vm.nuevoEntierro.lugar, vm.nuevoEntierro.prioridad),
+        objTemp = JSON.parse($stateParams.objDifuntoTemp);
+        
+      let objDifunto = new Difunto(objTemp.idlapida, objTemp.apodo, objTemp.edad, objTemp.sexo, objTemp.tamanno);
+
       // localStorage.setItem('nuevoEntierro', JSON.stringify(objNuevoEntierro));
       // console.log(objNuevoEntierro.obtenerHora()); //metodo de horas y minutos
 
@@ -44,7 +47,7 @@
       });
 
       // Pasamos al servicio el nuevo obj de tipo cliente para ser almacenado en el localStorage
-      // servicioEntierros.agregarEntierro(pnuevoEntierro)
+      servicioUsuarios.addEntierros(objDifunto, objNuevoEntierro);
 
       // Se limpia el formulario
       vm.nuevoEntierro = null;

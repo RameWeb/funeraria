@@ -121,6 +121,9 @@
           return $ocLazyLoad.load('./components/entierros/entierros.controlador.js')
         }]
       },
+      params: {
+        objDifuntoTemp: ''
+      },
       controller: 'controladorEntierros',
       controllerAs: 'vm'
     })
